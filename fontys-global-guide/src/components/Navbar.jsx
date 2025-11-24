@@ -36,6 +36,15 @@ function Navbar() {
                             <Link className="nav-link" to="/student-community">Community</Link>
                         </li>
                         <li className="nav-item">
+                            <Link className="nav-link" to="/fontys-discover">Fontys Discover</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/campus-explorer">Campus Explorer</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/expense-tracker">Expense Tracker</Link>
+                        </li>
+                        <li className="nav-item">
                             <Link className="nav-link" to="/help-center">Help Center</Link>
                         </li>
                         {/* later: login / signup */}
