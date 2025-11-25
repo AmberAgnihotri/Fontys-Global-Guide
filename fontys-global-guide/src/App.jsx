@@ -10,7 +10,7 @@ import StudentCommunity from "./pages/StudentCommunity.jsx";
 import Navbar from "./components/Navbar.jsx";
 import fontysDiscover from "./pages/fontysDiscover.jsx";
 import campusExplorer from "./pages/campusExplorer.jsx";
-import expenseTracker from "./pages/expenseTracker.jsx";
+import ExpenseTracker from "./pages/expenseTracker.jsx";
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
         <Route path="/student-community" element={<StudentCommunity />} />
         <Route path="/fontys-discover" element={<fontysDiscover />} />
         <Route path="/campus-explorer" element={<campusExplorer />} />
-        <Route path="/expense-tracker" element={<expenseTracker />} />
+        <Route path="/expense-tracker" element={<ExpenseTracker />} />
         <Route path="/help-center" element={<HelpCenter />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
