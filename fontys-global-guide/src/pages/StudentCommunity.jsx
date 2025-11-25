@@ -5,15 +5,18 @@ import {
     doc,
     query,
     orderBy,
-    onSnapshot
+    onSnapshot,
+    addDoc,
+    serverTimestamp
 } from "firebase/firestore";
 
 function StudentCommunity() {
     const [channels, setChannels] = useState([]);
     const [selectedChannelId, setSelectedChannelId] = useState("general");
     const [messages, setMessages] = useState([]);
+    const [newMessage, setNewMessage] = useState("");
 
-
+    // 1) Channels ophalen
     useEffect(() => {
         const channelsRef = collection(db, "channels");
         const unsubscribe = onSnapshot(channelsRef, (snapshot) => {
@@ -27,7 +30,7 @@ function StudentCommunity() {
         return () => unsubscribe();
     }, []);
 
-    // 2) Load messages for the selected channel
+    // 2) Messages ophalen voor geselecteerde channel
     useEffect(() => {
         if (!selectedChannelId) return;
 
@@ -46,6 +49,29 @@ function StudentCommunity() {
 
         return () => unsubscribe();
     }, [selectedChannelId]);
+
+    // 3) Bericht versturen
+    const handleSendMessage = async (e) => {
+        e.preventDefault();
+
+        const text = newMessage.trim();
+        if (!text || !selectedChannelId) return;
+
+        try {
+            const channelRef = doc(db, "channels", selectedChannelId);
+            const messagesRef = collection(channelRef, "messages");
+
+            await addDoc(messagesRef, {
+                userId: "testUser123",   // later vervangen door echte userId
+                text,
+                createdAt: serverTimestamp(),
+            });
+
+            setNewMessage("");
+        } catch (err) {
+            console.error("Error sending message:", err);
+        }
+    };
 
     return (
         <div className="container mt-4">
@@ -88,6 +114,22 @@ function StudentCommunity() {
                     ))}
                 </div>
             </div>
+
+            {/* MESSAGE INPUT */}
+            <form onSubmit={handleSendMessage} className="mt-3">
+                <div className="input-group">
+                    <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Type your message..."
+                        value={newMessage}
+                        onChange={(e) => setNewMessage(e.target.value)}
+                    />
+                    <button className="btn btn-primary" type="submit">
+                        Send
+                    </button>
+                </div>
+            </form>
         </div>
     );
 }
