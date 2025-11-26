@@ -9,6 +9,7 @@ import {
     addDoc,
     serverTimestamp
 } from "firebase/firestore";
+import '../styles/StudentCommunity.css';
 
 function StudentCommunity() {
     const [channels, setChannels] = useState([]);
@@ -94,41 +95,58 @@ function StudentCommunity() {
             </div>
 
             {/* MESSAGES */}
-            <div className="card">
-                <div className="card-body" style={{ maxHeight: "60vh", overflowY: "auto" }}>
+            <div className="card chat-card">
+                <div className="chat-messages">
                     {messages.length === 0 && (
                         <p className="text-muted">No messages yet in this channel.</p>
                     )}
 
-                    {messages.map((msg) => (
-                        <div key={msg.id} className="mb-2">
-                            <div className="small text-muted">
-                                {msg.userId || "Unknown user"} •{" "}
-                                {msg.createdAt?.toDate
-                                    ? msg.createdAt.toDate().toLocaleString()
-                                    : "just now"}
+                    {messages.map((msg) => {
+                        const isOwn = msg.userId === "testUser123"; // later: auth.currentUser.uid
+
+                        return (
+                            <div
+                                key={msg.id}
+                                className={
+                                    "chat-message-row " +
+                                    (isOwn ? "chat-message-row--own" : "")
+                                }
+                            >
+                                <div
+                                    className={
+                                        "chat-message-bubble " +
+                                        (isOwn
+                                            ? "chat-message-bubble--own"
+                                            : "chat-message-bubble--other")
+                                    }
+                                >
+                                    <div className="chat-message-meta">
+                                        {msg.userId || "Unknown user"} •{" "}
+                                        {msg.createdAt?.toDate
+                                            ? msg.createdAt.toDate().toLocaleTimeString()
+                                            : "just now"}
+                                    </div>
+                                    <div className="chat-message-text">{msg.text}</div>
+                                </div>
                             </div>
-                            <div>{msg.text}</div>
-                            <hr />
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
             </div>
+            <form onSubmit={handleSendMessage} className="chat-input-bar">
+                <button type="button" className="chat-plus-btn">+</button>
 
-            {/* MESSAGE INPUT */}
-            <form onSubmit={handleSendMessage} className="mt-3">
-                <div className="input-group">
-                    <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Type your message..."
-                        value={newMessage}
-                        onChange={(e) => setNewMessage(e.target.value)}
-                    />
-                    <button className="btn btn-primary" type="submit">
-                        Send
-                    </button>
-                </div>
+                <input
+                    type="text"
+                    className="chat-input"
+                    placeholder="Message..."
+                    value={newMessage}
+                    onChange={(e) => setNewMessage(e.target.value)}
+                />
+
+                <button type="submit" className="chat-send-btn">
+                    ➤
+                </button>
             </form>
         </div>
     );

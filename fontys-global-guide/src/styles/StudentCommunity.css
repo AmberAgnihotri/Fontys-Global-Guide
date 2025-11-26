@@ -1,0 +1,105 @@
+.chat-card {
+  border-radius: 18px;
+  border: 1px solid #e0e0e0;
+  padding: 12px;
+  background-color: #fafafa;
+}
+
+/* De lijst met berichten */
+.chat-messages {
+  max-height: 60vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Rij per bericht */
+.chat-message-row {
+  display: flex;
+}
+
+/* Eigen berichten rechts */
+.chat-message-row--own {
+  justify-content: flex-end;
+}
+
+/* Bubble zelf */
+.chat-message-bubble {
+  max-width: 75%;
+  padding: 8px 12px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.chat-message-bubble--own {
+  background-color: #663366;
+  color: #ffffff;
+  border-bottom-right-radius: 4px;
+}
+
+.chat-message-bubble--other {
+  background-color: #e5e7eb;
+  color: #111827;
+  border-bottom-left-radius: 4px;
+}
+
+.chat-message-meta {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  margin-bottom: 2px;
+}
+
+.chat-message-text {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+.chat-input-bar {
+  position: sticky;
+  bottom: 0;
+  background: #ffffff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 10px;
+}
+
+/* + knop links */
+.chat-plus-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: #e5e7eb;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Input zoals WhatsApp/iMessage */
+.chat-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px 14px;
+  border-radius: 20px;
+  background: #f1f5f9;
+  font-size: 15px;
+}
+
+/* Send/Mic knop rechts */
+.chat-send-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: #4f46e5;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
