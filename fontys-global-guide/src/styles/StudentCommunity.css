@@ -5,7 +5,6 @@
   background-color: #fafafa;
 }
 
-/* De lijst met berichten */
 .chat-messages {
   max-height: 60vh;
   overflow-y: auto;
@@ -14,17 +13,14 @@
   gap: 8px;
 }
 
-/* Rij per bericht */
 .chat-message-row {
   display: flex;
 }
 
-/* Eigen berichten rechts */
 .chat-message-row--own {
   justify-content: flex-end;
 }
 
-/* Bubble zelf */
 .chat-message-bubble {
   max-width: 75%;
   padding: 8px 12px;
@@ -67,7 +63,6 @@
   margin-top: 10px;
 }
 
-/* + knop links */
 .chat-plus-btn {
   width: 36px;
   height: 36px;
@@ -81,7 +76,6 @@
   cursor: pointer;
 }
 
-/* Input zoals WhatsApp/iMessage */
 .chat-input {
   flex: 1;
   border: none;
@@ -92,7 +86,6 @@
   font-size: 15px;
 }
 
-/* Send/Mic knop rechts */
 .chat-send-btn {
   width: 40px;
   height: 40px;
