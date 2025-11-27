@@ -8,9 +8,9 @@ import Housing from "./pages/Housing.jsx";
 import HelpCenter from "./pages/HelpCenter.jsx";
 import StudentCommunity from "./pages/StudentCommunity.jsx";
 import Navbar from "./components/Navbar.jsx";
-import FontysDiscover from "./pages/fontysDiscover.jsx";
-import CampusExplorer from "./pages/campusExplorer.jsx";
-import ExpenseTracker from "./pages/expenseTracker.jsx";
+import FontysDiscover from "./pages/FontysDiscover.jsx";
+import CampusExplorer from "./pages/CampusExplorer.jsx";
+import ExpenseTracker from "./pages/ExpenseTracker.jsx";
 
 
 function App() {
