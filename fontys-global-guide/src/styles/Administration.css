@@ -1,0 +1,88 @@
+/* Main container */
+.admin-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  position: relative;
+}
+
+/* Page content */
+.admin-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.admin-info {
+  background-color: #6b21a8; /* Purple */
+  color: black;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  max-width: 24rem;
+  text-align: center;
+}
+
+/* Button at the bottom */
+.admin-button {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 2rem;
+  background-color: #6b21a8; /* Purple */
+  color: black;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Fullscreen overlay */
+.pdf-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  background-color: white;
+  overflow-y: auto; /* Enable scrolling */
+}
+
+/* Back button */
+.back-button {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 10000;
+  background-color: #1f2937; /* Dark gray */
+  color: white;
+  padding: 0.625rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* PDF iframe */
+.pdf-iframe {
+  width: 100%;
+  height: 100vh;
+  border: none;
+  margin-top: 3.75rem; /* Prevent overlap with back button */
+}
+
+/* Fallback link */
+.fallback-link {
+  width: 100%;
+  text-align: center;
+  padding: 1.25rem;
+}
+
+.fallback-link a {
+  color: #2563eb; /* Blue */
+  text-decoration: underline;
+}
