@@ -48,27 +48,32 @@ function Navbar() {
                         <ul className="navbar-nav ms-auto">
                             <li className="nav-item">
                                 <Link className="nav-link text-white" to="/" data-bs-dismiss="offcanvas">
+                                    <i class="fa-regular fa-house"></i>
+                                    Home
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link text-white" to="/student-community" data-bs-dismiss="offcanvas">
+                                    <i class="fa-solid fa-people-line"></i>
                                     Student Community
                                 </Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link text-white" to="/city-guide" data-bs-dismiss="offcanvas">
+                                    <i class="fa-solid fa-city"></i>
                                     City Guide
                                 </Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link text-white" to="/housing" data-bs-dismiss="offcanvas">
+                                    <i class="fa-solid fa-house-chimney-window"></i>
                                     Housing
                                 </Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link text-white" to="/administration" data-bs-dismiss="offcanvas">
+                                    <i class="fa-regular fa-file-lines"></i>
                                     Administration
-                                </Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link text-white" to="/student-community" data-bs-dismiss="offcanvas">
-                                    Student Community
                                 </Link>
                             </li>
                             <li className="nav-item">
@@ -78,6 +83,7 @@ function Navbar() {
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link text-white" to="/campus-explorer" data-bs-dismiss="offcanvas">
+                                    <i class="fa-regular fa-compass"></i>
                                     Campus Explorer
                                 </Link>
                             </li>
@@ -88,17 +94,13 @@ function Navbar() {
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link text-white" to="/help-center" data-bs-dismiss="offcanvas">
+                                    <i class="fa-regular fa-circle-question"></i>
                                     Help Center
                                 </Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link text-white" to="/login" data-bs-dismiss="offcanvas">
-                                    Login
-                                </Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link text-white" to="/signup" data-bs-dismiss="offcanvas">
-                                    Sign Up
+                                    Log out
                                 </Link>
                             </li>
                         </ul>
