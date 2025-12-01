@@ -17,7 +17,6 @@
 }
 
 .admin-info {
-  background-color: #6b21a8; /* Purple */
   color: black;
   padding: 1.5rem;
   border-radius: 1rem;
@@ -25,14 +24,13 @@
   text-align: center;
 }
 
-/* Button at the bottom */
 .admin-button {
   position: absolute;
   bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
   padding: 1rem 2rem;
-  background-color: #6b21a8; /* Purple */
+  background-color: #663366;
   color: black;
   border: none;
   border-radius: 0.5rem;
@@ -58,7 +56,7 @@
   top: 1rem;
   left: 1rem;
   z-index: 10000;
-  background-color: #1f2937; /* Dark gray */
+  background-color: #1f2937;
   color: white;
   padding: 0.625rem 1rem;
   border-radius: 0.5rem;
@@ -67,15 +65,13 @@
   font-size: 1rem;
 }
 
-/* PDF iframe */
 .pdf-iframe {
   width: 100%;
   height: 100vh;
   border: none;
-  margin-top: 3.75rem; /* Prevent overlap with back button */
+  margin-top: 3.75rem;
 }
 
-/* Fallback link */
 .fallback-link {
   width: 100%;
   text-align: center;
@@ -83,6 +79,23 @@
 }
 
 .fallback-link a {
-  color: #2563eb; /* Blue */
+  color: #2563eb;
   text-decoration: underline;
+}
+
+.container .btn-outline-primary {
+  color: #663366 !important;
+  border-color: #663366 !important;
+}
+
+.container .btn-outline-primary:hover {
+  color: white !important;
+  background-color: #663366 !important;
+  border-color: #663366 !important;
+}
+
+.container .btn-primary {
+  color: white !important;
+  background-color: #663366 !important;
+  border-color: #663366 !important;
 }
