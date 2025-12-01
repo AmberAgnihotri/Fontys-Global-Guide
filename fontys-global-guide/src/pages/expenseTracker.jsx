@@ -7,8 +7,31 @@ export default function ExpenseTracker() {
     const [category, setCategory] = useState('housing');
     const [currency, setCurrency] = useState('EUR');
 
+    // Currency converter state
+    const [convertAmount, setConvertAmount] = useState('');
+    const [fromCurrency, setFromCurrency] = useState('EUR');
+    const [toCurrency, setToCurrency] = useState('USD');
+    const [convertedResult, setConvertedResult] = useState(null);
+
     const categories = ['housing', 'food', 'transport', 'study', 'entertainment', 'healthcare', 'other'];
     const currencies = ['EUR', 'USD', 'GBP', 'INR', 'CNY'];
+
+    // Exchange rates (approximate rates relative to EUR)
+    const exchangeRates = {
+        EUR: 1,
+        USD: 1.08,
+        GBP: 0.86,
+        INR: 90.5,
+        CNY: 7.85
+    };
+
+    const convertCurrency = () => {
+        if (convertAmount && !isNaN(parseFloat(convertAmount))) {
+            const amountInEur = parseFloat(convertAmount) / exchangeRates[fromCurrency];
+            const result = amountInEur * exchangeRates[toCurrency];
+            setConvertedResult(result.toFixed(2));
+        }
+    };
     const addExpense = (e) => {
         e.preventDefault();
         if (description && amount) {
@@ -41,11 +64,52 @@ export default function ExpenseTracker() {
 
     return (
         <div style={{ padding: '20px', maxWidth: '1200px', margin: '0 auto', backgroundColor: '#f0f0f0', minHeight: '100vh' }}>
-            <div style={{ backgroundColor: 'red', color: 'white', padding: '10px' }}>
-                TEST - If you see this, the component is loading!
-            </div>
-            
             <h1>Expense Tracker for International Students</h1>
+
+            {/* Currency Converter Section */}
+            <div style={{ marginBottom: '30px', padding: '20px', border: '1px solid #ddd', borderRadius: '8px', backgroundColor: '#e8f4f8' }}>
+                <h2>Currency Converter</h2>
+                <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', alignItems: 'center' }}>
+                    <input
+                        type="number"
+                        placeholder="Amount"
+                        value={convertAmount}
+                        onChange={(e) => setConvertAmount(e.target.value)}
+                        step="0.01"
+                        style={{ padding: '8px', fontSize: '16px', width: '120px' }}
+                    />
+                    <select
+                        value={fromCurrency}
+                        onChange={(e) => setFromCurrency(e.target.value)}
+                        style={{ padding: '8px', fontSize: '16px' }}
+                    >
+                        {currencies.map(curr => (
+                            <option key={curr} value={curr}>{curr}</option>
+                        ))}
+                    </select>
+                    <span style={{ fontSize: '18px' }}>→</span>
+                    <select
+                        value={toCurrency}
+                        onChange={(e) => setToCurrency(e.target.value)}
+                        style={{ padding: '8px', fontSize: '16px' }}
+                    >
+                        {currencies.map(curr => (
+                            <option key={curr} value={curr}>{curr}</option>
+                        ))}
+                    </select>
+                    <button
+                        onClick={convertCurrency}
+                        style={{ padding: '10px 20px', fontSize: '16px', cursor: 'pointer', backgroundColor: '#28a745', color: 'white', border: 'none', borderRadius: '4px' }}
+                    >
+                        Convert
+                    </button>
+                    {convertedResult !== null && (
+                        <span style={{ fontSize: '18px', fontWeight: 'bold', marginLeft: '10px' }}>
+                            = {convertedResult} {toCurrency}
+                        </span>
+                    )}
+                </div>
+            </div>
             
             <form onSubmit={addExpense} style={{ marginBottom: '30px', padding: '20px', border: '1px solid #ddd', borderRadius: '8px' }}>
                 <h2>Add New Expense</h2>
