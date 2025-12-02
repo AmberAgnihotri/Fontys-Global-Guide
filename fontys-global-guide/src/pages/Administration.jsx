@@ -7,9 +7,7 @@ export default function Administration() {
 
   return (
     <>
-      {/* Main Page */}
       <div className="admin-container">
-        {/* Page Content */}
         <div className="admin-content">
           <div className="admin-info">
             Op deze pagina komt de administratie. Hier staat wat een
