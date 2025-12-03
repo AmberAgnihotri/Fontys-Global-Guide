@@ -1,5 +1,5 @@
 import { useState } from "react";
-import checklistPdf from "../../assets/checklist.pdf";
+import checklistPdf from "../assets/checklist-1.pdf";
 import "../styles/Administration.css"; // Import the CSS file
 
 export default function Administration() {
