@@ -3,7 +3,11 @@ import girlPicture from '../assets/girl-with-books.jpg';
 import graduationPic from '../assets/graduation.jpg';
 import "../styles/Home.css";
 
+import { useTranslation } from "react-i18next";
+
 export default function Home() {
+    const { t } = useTranslation();
+
     return (
         <div className="home-page">
 
@@ -14,12 +18,8 @@ export default function Home() {
             />
 
             <div className="home-text">
-                <h1>Welcome to <br /> Fontys Global Guide</h1>
-                <p>
-                    The all-in-one app for international students at Fontys.
-                    We help you with housing, administration, exploring the city
-                    and connecting with other students — all in one place.
-                </p>
+                <h1>{t("home.title")}</h1>
+                <p>{t("home.intro")}</p>
             </div>
 
             <img
@@ -29,13 +29,8 @@ export default function Home() {
             />
 
             <div className="home-text">
-                <h2>Our Mission</h2>
-                <p>
-                    Starting your studies in a new country can feel overwhelming.
-                    Fontys Global Guide is here to support international students
-                    with clear information, helpful tools and a strong community.
-                    Everything you need for a smooth start, all in one app.
-                </p>
+                <h2>{t("home.missionTitle")}</h2>
+                <p>{t("home.missionText")}</p>
             </div>
 
             <img
@@ -45,13 +40,8 @@ export default function Home() {
             />
 
             <div className="home-text">
-                <h2>Building Your Future Together</h2>
-                <p>
-                    We believe students succeed best when they feel supported and connected.
-                    With Fontys Global Guide, we aim to improve the student experience,
-                    strengthen the international community and help you grow during
-                    your time at Fontys.
-                </p>
+                <h2>{t("home.futureTitle")}</h2>
+                <p>{t("home.futureText")}</p>
             </div>
 
         </div>

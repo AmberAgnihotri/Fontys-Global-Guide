@@ -1,0 +1,18 @@
+{
+  "home": {
+    "title": "Bienvenue sur Fontys Global Guide",
+    "intro": "L’application tout-en-un pour les étudiants internationaux à Fontys. Nous t’aidons avec le logement, l’administration, la découverte de la ville et la connexion avec d’autres étudiants — tout au même endroit.",
+
+    "missionTitle": "Notre mission",
+    "missionText": "Commencer ses études dans un nouveau pays peut être éprouvant. Fontys Global Guide est là pour soutenir les étudiants internationaux avec des informations claires, des outils utiles et une communauté forte. Tout ce dont tu as besoin pour bien commencer, dans une seule application.",
+
+    "futureTitle": "Construire ton avenir ensemble",
+    "futureText": "Nous croyons que les étudiants réussissent mieux lorsqu’ils se sentent soutenus et connectés. Avec Fontys Global Guide, nous voulons améliorer l’expérience étudiante, renforcer la communauté internationale et t’aider à grandir durant ton parcours à Fontys."
+  },
+
+  "studentCommunity": {
+    "title": "Communauté étudiante",
+    "noMessages": "Aucun message dans ce canal pour le moment.",
+    "placeholder": "Message..."
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "home": {
+    "title": "Welkom bij Fontys Global Guide",
+    "intro": "De alles-in-één app voor internationale studenten bij Fontys. We helpen je met huisvesting, administratie, de stad ontdekken en het maken van contact met andere studenten — allemaal op één plek.",
+
+    "missionTitle": "Onze missie",
+    "missionText": "Studeren in een nieuw land kan best overweldigend zijn. Fontys Global Guide is er om internationale studenten te ondersteunen met duidelijke informatie, handige tools en een hechte community. Alles wat je nodig hebt voor een goede start, in één app.",
+
+    "futureTitle": "Samen bouwen aan jouw toekomst",
+    "futureText": "Wij geloven dat studenten beter presteren wanneer ze zich gesteund en verbonden voelen. Met Fontys Global Guide willen we de studentenervaring verbeteren, de internationale gemeenschap versterken en jou helpen groeien tijdens je tijd bij Fontys."
+  },
+  "studentCommunity": {
+    "title": "Studentencommunity",
+    "noMessages": "Nog geen berichten in dit kanaal.",
+    "placeholder": "Bericht..."
+  }
+}
