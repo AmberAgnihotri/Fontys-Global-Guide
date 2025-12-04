@@ -8,7 +8,7 @@ import Housing from "./pages/Housing.jsx";
 import HelpCenter from "./pages/HelpCenter.jsx";
 import StudentCommunity from "./pages/StudentCommunity.jsx";
 import Navbar from "./components/Navbar.jsx";
-import FontysDiscover from "./pages/FontysDiscover.jsx";
+import FontysDiscover from "./pages/fontysDiscover.jsx";
 import CampusExplorer from "./pages/CampusExplorer.jsx";
 import ExpenseTracker from "./pages/expenseTracker.jsx";
 
@@ -18,7 +18,7 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<StudentCommunity />} />
+        <Route path="/" element={<Administration />} />
         <Route path="/city-guide" element={<CityGuide />} />
         <Route path="/housing" element={<Housing />} />
         <Route path="/administration" element={<Administration />} />
