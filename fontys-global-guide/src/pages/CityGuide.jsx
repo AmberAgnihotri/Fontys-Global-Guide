@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
+// haal deze uit commentaar als je ze hebt
 // import tilburgImg from "../images/tilburg.jpg";
 // import eindhovenImg from "../images/Eindhoven.webp";
 // import sittardImg from "../images/sittard.jpg";
@@ -9,56 +11,7 @@ import React, { useState } from "react";
 
 export default function CityGuide() {
     const [selectedCity, setSelectedCity] = useState(null);
-
-    const cities = [
-        {
-            name: "Tilburg",
-            image: tilburgImg,
-            info: "Tilburg staat bekend om het bruisende centrum."
-        },
-        {
-            name: "Eindhoven",
-            image: eindhovenImg,
-            info: {
-                intro: "Eindhoven is de lichtstad van Nederland en staat bekend om technologie, design en innovatie.",
-                housing: "De gemiddelde huur ligt rond €900–€1300 per maand, afhankelijk van de wijk.",
-                housinglink: [
-                    { url: "https://www.wooniezie.nl", label: "Wooniezie.nl" },
-                    { url: "https://www.huurwoningen.com/in/eindhoven/?utm_source=google&utm_medium=ads&utm_campaign=16719250034&utm_adgroup=132905063257&gad_source=1&gad_campaignid=16719250034&gbraid=0AAAAACmIcEGZcg6N-YpWPloK2TUlexXfs&gclid=CjwKCAiA55rJBhByEiwAFkY1QGhRo8MtJY_4xbEuaoTq_yKLpAHmPT0qmmjO42G5qw4Zdt-STneR9hoCjTEQAvD_BwE", label: "Huurwoningen.com" },
-                    { url: "https://kamernet.nl/huren/kamer-eindhoven?utm_source=google&utm_medium=cpc&utm_campaign=19678546926&utm_content=648163200608&utm_term=kamer%20huren%20eindhoven&gad_source=1&gad_campaignid=19678546926&gbraid=0AAAAAD4d43qtnpeFWlImGJvI0Rjveebu9&gclid=CjwKCAiA55rJBhByEiwAFkY1QIXdUYxNAc3eIbjSZwVPJxHGYfDGNCjIYpIuztkCdeFZGdQaeyEYWxoCw7cQAvD_BwE", label: "Kamernet.nl" },
-                    { url: "https://www.fontys.nl/nieuws/hospi-housing-wordt-platform-voor-studenten-en-hospitas-in-eindhoven/", label: "Fontys Hospi Housing" },
-                ],
-                transport: "Eindhoven heeft een groot treinstation, veel buslijnen en een internationale luchthaven.",
-                highlights: [
-                    "Philips Museum",
-                    "Strijp-S",
-                    "High Tech Campus",
-                    "Effenaar",
-                    "PSV Stadion"
-                ]
-            }
-        },
-        {
-            name: "Sittard",
-            image: sittardImg,
-            info: "Sittard is een rustige, historische stad."
-        },
-        {
-            name: "Venlo",
-            image: VenloImg,
-            info: "Venlo ligt dicht bij de Duitse grens en heeft veel natuur."
-        },
-        {
-            name: "'s-Hertogenbosch",
-            image: denboschImg,
-            info: "Bekend om de Bossche bol en historische binnenstad."
-        },
-        {
-            name: "Utrecht",
-            image: utrechtImg,
-            info: "Utrecht heeft unieke grachten met werfkelders."
-        },
-    ];
+    const { t } = useTranslation();
 
     const styles = {
         container: {
@@ -122,12 +75,65 @@ export default function CityGuide() {
         }
     };
 
+    // 🔤 alle tekst komt nu uit i18n
+    const cities = [
+        {
+            id: "tilburg",
+            name: t("cityGuide.tilburg.name"),
+            image: tilburgImg,
+            info: t("cityGuide.tilburg.info")
+        },
+        {
+            id: "eindhoven",
+            name: t("cityGuide.eindhoven.name"),
+            image: eindhovenImg,
+            info: {
+                intro: t("cityGuide.eindhoven.intro"),
+                housing: t("cityGuide.eindhoven.housing"),
+                housinglink: [
+                    { url: "https://www.wooniezie.nl", label: "Wooniezie.nl" },
+                    { url: "https://www.huurwoningen.com/in/eindhoven/", label: "Huurwoningen.com" },
+                    { url: "https://kamernet.nl/huren/kamer-eindhoven", label: "Kamernet.nl" },
+                    { url: "https://www.fontys.nl/nieuws/hospi-housing-wordt-platform-voor-studenten-en-hospitas-in-eindhoven/", label: "Fontys Hospi Housing" }
+                ],
+                transport: t("cityGuide.eindhoven.transport"),
+                highlights: t("cityGuide.eindhoven.highlights", { returnObjects: true })
+            }
+        },
+        {
+            id: "sittard",
+            name: t("cityGuide.sittard.name"),
+            image: sittardImg,
+            info: t("cityGuide.sittard.info")
+        },
+        {
+            id: "venlo",
+            name: t("cityGuide.venlo.name"),
+            image: VenloImg,
+            info: t("cityGuide.venlo.info")
+        },
+        {
+            id: "denbosch",
+            name: t("cityGuide.denbosch.name"),
+            image: denboschImg,
+            info: t("cityGuide.denbosch.info")
+        },
+        {
+            id: "utrecht",
+            name: t("cityGuide.utrecht.name"),
+            image: utrechtImg,
+            info: t("cityGuide.utrecht.info")
+        },
+    ];
+
     // ⭐ DETAIL SCREEN ⭐
     if (selectedCity) {
+        const info = selectedCity.info;
+
         return (
             <div style={styles.container}>
                 <button style={styles.backButton} onClick={() => setSelectedCity(null)}>
-                    ← Terug
+                    ← {t("cityGuide.back")}
                 </button>
 
                 <h1>{selectedCity.name}</h1>
@@ -138,21 +144,20 @@ export default function CityGuide() {
                     style={styles.detailImage}
                 />
 
-                {/* 👉 Only Eindhoven gets expanded info */}
-                {typeof selectedCity.info === "string" ? (
-                    <p>{selectedCity.info}</p>
+                {typeof info === "string" ? (
+                    <p>{info}</p>
                 ) : (
                     <div>
-                        <h3>Over {selectedCity.name}</h3>
-                        <p>{selectedCity.info.intro}</p>
+                        <h3>{t("cityGuide.sections.about", { city: selectedCity.name })}</h3>
+                        <p>{info.intro}</p>
 
-                        <h3>Wonen</h3>
-                        <p>{selectedCity.info.housing}</p>
+                        <h3>{t("cityGuide.sections.housing")}</h3>
+                        <p>{info.housing}</p>
 
-                        {selectedCity.info.housinglink && (
+                        {info.housinglink && (
                             <div>
-                                <h4>Bekijk beschikbare woningen:</h4>
-                                {selectedCity.info.housinglink.map((link, index) => (
+                                <h4>{t("cityGuide.sections.housingLinksTitle")}</h4>
+                                {info.housinglink.map((link, index) => (
                                     <a
                                         key={index}
                                         href={link.url}
@@ -175,13 +180,12 @@ export default function CityGuide() {
                             </div>
                         )}
 
+                        <h3>{t("cityGuide.sections.transport")}</h3>
+                        <p>{info.transport}</p>
 
-                        <h3>Vervoer</h3>
-                        <p>{selectedCity.info.transport}</p>
-
-                        <h3>Belangrijke plekken</h3>
+                        <h3>{t("cityGuide.sections.highlights")}</h3>
                         <ul>
-                            {selectedCity.info.highlights.map((item) => (
+                            {info.highlights.map((item) => (
                                 <li key={item}>{item}</li>
                             ))}
                         </ul>
@@ -194,12 +198,12 @@ export default function CityGuide() {
     // ⭐ OVERVIEW SCREEN ⭐
     return (
         <div style={styles.container}>
-            <div style={styles.header}>City Guide & Housing</div>
+            <div style={styles.header}>{t("cityGuide.header")}</div>
 
             <div style={styles.grid}>
                 {cities.map((city) => (
                     <div
-                        key={city.name}
+                        key={city.id}
                         onClick={() => setSelectedCity(city)}
                         style={{
                             ...styles.card,

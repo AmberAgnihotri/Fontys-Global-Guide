@@ -1,0 +1,101 @@
+{
+  "home": {
+    "title": "Bienvenido a Fontys Global Guide",
+    "intro": "La aplicación todo en uno para estudiantes internacionales en Fontys. Te ayudamos con la vivienda, la administración, a explorar la ciudad y a conectar con otros estudiantes — todo en un solo lugar.",
+
+    "missionTitle": "Nuestra misión",
+    "missionText": "Comenzar tus estudios en un nuevo país puede ser abrumador. Fontys Global Guide está aquí para apoyar a los estudiantes internacionales con información clara, herramientas útiles y una comunidad fuerte. Todo lo que necesitas para un buen comienzo, en una sola aplicación.",
+
+    "futureTitle": "Construyendo tu futuro juntos",
+    "futureText": "Creemos que los estudiantes tienen más éxito cuando se sienten apoyados y conectados. Con Fontys Global Guide queremos mejorar la experiencia estudiantil, fortalecer la comunidad internacional y ayudarte a crecer durante tu tiempo en Fontys."
+  },
+
+  "studentCommunity": {
+    "title": "Comunidad estudiantil",
+    "noMessages": "Todavía no hay mensajes en este canal.",
+    "placeholder": "Mensaje..."
+  },
+  "administration": {
+    "info": "En esta página encontrarás toda la administración que debes organizar antes de comenzar tus estudios en los Países Bajos.",
+    "checklist": "Lista de verificación",
+    "back": "Volver",
+    "openPdf": "Abrir PDF en una nueva pestaña"
+  },
+  "expense": {
+    "title": "Control de gastos para estudiantes internacionales",
+    "converter": "Convertidor de divisas",
+    "from": "Desde moneda",
+    "to": "A moneda",
+    "amount": "Cantidad",
+    "converted": "Cantidad convertida",
+    "swap": "Cambiar monedas",
+    "refresh": "Actualizar tasas",
+    "refreshing": "Actualizando...",
+    "exchangeRate": "Tipo de cambio",
+    "lastUpdated": "Última actualización",
+    "addExpense": "Agregar nuevo gasto",
+    "description": "Descripción",
+    "addBtn": "Agregar gasto",
+    "summary": "Resumen",
+    "total": "Total",
+    "list": "Lista de gastos",
+    "noExpenses": "Todavía no hay gastos. ¡Agrega tu primer gasto!",
+    "date": "Fecha",
+    "category": "Categoría",
+    "action": "Acción",
+    "delete": "Eliminar",
+    "categories": {
+      "housing": "Vivienda",
+      "food": "Comida",
+      "transport": "Transporte",
+      "study": "Estudios",
+      "entertainment": "Entretenimiento",
+      "healthcare": "Salud",
+      "other": "Otro"
+    }
+  },
+  "cityGuide": {
+    "header": "Guía de ciudades y alojamiento",
+    "back": "Volver",
+    "sections": {
+      "about": "Sobre {{city}}",
+      "housing": "Alojamiento",
+      "transport": "Transporte",
+      "highlights": "Lugares importantes",
+      "housingLinksTitle": "Ver plataformas de vivienda disponibles:"
+    },
+    "tilburg": {
+      "name": "Tilburg",
+      "info": "Tilburg es conocida por su animado centro y ambiente estudiantil."
+    },
+    "eindhoven": {
+      "name": "Eindhoven",
+      "intro": "Eindhoven es la ciudad de la luz, conocida por la tecnología, el diseño y la innovación.",
+      "housing": "El alquiler medio está entre 900 € y 1300 € al mes, dependiendo del barrio y del tipo de alojamiento.",
+      "transport": "Eindhoven tiene una estación de tren importante, muchas líneas de autobús y un aeropuerto internacional.",
+      "highlights": [
+        "Museo Philips",
+        "Strijp-S",
+        "High Tech Campus",
+        "Effenaar",
+        "Estadio del PSV"
+      ]
+    },
+    "sittard": {
+      "name": "Sittard",
+      "info": "Sittard es una ciudad tranquila e histórica con un centro acogedor."
+    },
+    "venlo": {
+      "name": "Venlo",
+      "info": "Venlo está cerca de la frontera alemana y rodeada de naturaleza."
+    },
+    "denbosch": {
+      "name": "’s-Hertogenbosch",
+      "info": "Conocida por el pastel « Bossche Bol » y su centro histórico."
+    },
+    "utrecht": {
+      "name": "Utrecht",
+      "info": "Utrecht tiene canales únicos con bodegas a nivel del muelle y una animada cultura estudiantil."
+    }
+  }
+}

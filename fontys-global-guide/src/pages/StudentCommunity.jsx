@@ -10,12 +10,15 @@ import {
     serverTimestamp
 } from "firebase/firestore";
 import '../styles/StudentCommunity.css';
+import { useTranslation } from "react-i18next";
 
 function StudentCommunity() {
     const [channels, setChannels] = useState([]);
     const [selectedChannelId, setSelectedChannelId] = useState("general");
     const [messages, setMessages] = useState([]);
     const [newMessage, setNewMessage] = useState("");
+
+    const { t } = useTranslation();
 
     // 1) Channels ophalen
     useEffect(() => {
@@ -76,7 +79,8 @@ function StudentCommunity() {
 
     return (
         <div className="container mt-4">
-            <h2 className="mb-3">Student Community</h2>
+            {/* 👇 deze moet via t() */}
+            <h2 className="mb-3">{t("studentCommunity.title")}</h2>
 
             {/* CHANNEL LIST */}
             <div className="mb-3 d-flex gap-2 flex-wrap">
@@ -98,7 +102,8 @@ function StudentCommunity() {
             <div className="card chat-card">
                 <div className="chat-messages">
                     {messages.length === 0 && (
-                        <p className="text-muted">No messages yet in this channel.</p>
+                        // 👇 ook via t()
+                        <p className="text-muted">{t("studentCommunity.noMessages")}</p>
                     )}
 
                     {messages.map((msg) => {
@@ -133,13 +138,16 @@ function StudentCommunity() {
                     })}
                 </div>
             </div>
+
+            {/* INPUT BAR */}
             <form onSubmit={handleSendMessage} className="chat-input-bar">
                 <button type="button" className="chat-plus-btn">+</button>
 
                 <input
                     type="text"
                     className="chat-input"
-                    placeholder="Message..."
+                    // 👇 placeholder ook via t()
+                    placeholder={t("studentCommunity.placeholder")}
                     value={newMessage}
                     onChange={(e) => setNewMessage(e.target.value)}
                 />
