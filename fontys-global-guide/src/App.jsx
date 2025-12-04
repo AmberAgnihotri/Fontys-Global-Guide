@@ -27,7 +27,7 @@ function App() {
         <Route path="/campus-explorer" element={<CampusExplorer />} />
         <Route path="/expense-tracker" element={<ExpenseTracker />} />
         <Route path="/help-center" element={<HelpCenter />} />
-        <Route path="/log-out" element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
       </Routes>
     </>
