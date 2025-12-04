@@ -152,6 +152,16 @@ function Navbar() {
                                     Help Center
                                 </Link>
                             </li>
+                            <li className="nav-item">
+                                <Link
+                                    className="nav-link text-white"
+                                    to="/profile"
+                                    data-bs-dismiss="offcanvas"
+                                >
+                                    Profile
+                                </Link>
+                            </li>
+
 
                             <li className="nav-item">
                                 <Link
