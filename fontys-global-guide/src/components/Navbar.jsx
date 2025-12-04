@@ -211,6 +211,24 @@ function Navbar() {
                             >
                                 ES
                             </button>
+                            <button
+                                className={
+                                    "btn btn-sm me-2" +
+                                    (currentLang === "zh" ? "btn-light" : "btn-outline-light")
+                                }
+                                onClick={() => changeLang("zh")}
+                            >
+                                ZH
+                            </button>
+                            <button
+                                className={
+                                    "btn btn-sm " +
+                                    (currentLang === "tr" ? "btn-light" : "btn-outline-light")
+                                }
+                                onClick={() => changeLang("tr")}
+                            >
+                                TR
+                            </button>
                         </div>
                     </div>
                 </div>
