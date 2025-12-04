@@ -97,5 +97,23 @@
       "name": "Utrecht",
       "info": "Utrecht possède des canaux uniques avec caves sur quai et une vie étudiante animée."
     }
+  },
+  "profile": {
+    "title": "Profil",
+    "loading": "Chargement du profil…",
+    "notLoggedIn": "Vous devez être connecté pour voir votre profil.",
+    "username": "Nom d'utilisateur / nom affiché",
+    "email": "Adresse e-mail",
+    "newPassword": "Nouveau mot de passe (optionnel)",
+    "confirmPassword": "Confirmer le nouveau mot de passe",
+    "passwordPlaceholder": "Laisser vide pour conserver le mot de passe actuel",
+    "save": "Enregistrer les modifications",
+    "saving": "Enregistrement…",
+    "updated": "Votre profil a été mis à jour.",
+    "notLoggedError": "Vous n'êtes pas connecté.",
+    "passwordMismatch": "Les nouveaux mots de passe ne correspondent pas.",
+    "passwordTooShort": "Le nouveau mot de passe doit contenir au moins 6 caractères.",
+    "reauth": "Veuillez vous reconnecter pour modifier votre e-mail ou mot de passe.",
+    "saveError": "Impossible d'enregistrer les modifications."
   }
 }

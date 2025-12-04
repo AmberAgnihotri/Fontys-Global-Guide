@@ -96,5 +96,23 @@
       "name": "Utrecht",
       "info": "Utrecht heeft unieke grachten met werfkelders en een levendige studentencultuur."
     }
+  },
+  "profile": {
+    "title": "Profiel",
+    "loading": "Profiel laden…",
+    "notLoggedIn": "Je moet ingelogd zijn om je profiel te bekijken.",
+    "username": "Gebruikersnaam / weergavenaam",
+    "email": "E-mailadres",
+    "newPassword": "Nieuw wachtwoord (optioneel)",
+    "confirmPassword": "Bevestig nieuw wachtwoord",
+    "passwordPlaceholder": "Laat leeg om huidig wachtwoord te behouden",
+    "save": "Wijzigingen opslaan",
+    "saving": "Opslaan…",
+    "updated": "Je profiel is bijgewerkt.",
+    "notLoggedError": "Je bent niet ingelogd.",
+    "passwordMismatch": "De nieuwe wachtwoorden komen niet overeen.",
+    "passwordTooShort": "Het nieuwe wachtwoord moet minimaal 6 tekens bevatten.",
+    "reauth": "Log opnieuw in om je e-mail of wachtwoord te wijzigen.",
+    "saveError": "Wijzigingen opslaan mislukt."
   }
 }

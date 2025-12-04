@@ -8,9 +8,10 @@ import Housing from "./pages/Housing.jsx";
 import HelpCenter from "./pages/HelpCenter.jsx";
 import StudentCommunity from "./pages/StudentCommunity.jsx";
 import Navbar from "./components/Navbar.jsx";
-import FontysDiscover from "./pages/FontysDiscover.jsx";
+import FontysDiscover from "./pages/fontysDiscover.jsx";
 import CampusExplorer from "./pages/CampusExplorer.jsx";
 import ExpenseTracker from "./pages/expenseTracker.jsx";
+import Profile from "./pages/Profile.jsx";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path="/campus-explorer" element={<CampusExplorer />} />
         <Route path="/expense-tracker" element={<ExpenseTracker />} />
         <Route path="/help-center" element={<HelpCenter />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
       </Routes>

@@ -97,5 +97,23 @@
       "name": "Utrecht",
       "info": "Utrecht hat einzigartige Grachten mit Werfkellern und eine lebendige Studentenkultur."
     }
+  },
+  "profile": {
+    "title": "Profil",
+    "loading": "Profil wird geladen…",
+    "notLoggedIn": "Du musst eingeloggt sein, um dein Profil zu sehen.",
+    "username": "Benutzername / Anzeigename",
+    "email": "E-Mail-Adresse",
+    "newPassword": "Neues Passwort (optional)",
+    "confirmPassword": "Neues Passwort bestätigen",
+    "passwordPlaceholder": "Leer lassen, um das aktuelle Passwort zu behalten",
+    "save": "Änderungen speichern",
+    "saving": "Speichern…",
+    "updated": "Dein Profil wurde aktualisiert.",
+    "notLoggedError": "Du bist nicht eingeloggt.",
+    "passwordMismatch": "Die neuen Passwörter stimmen nicht überein.",
+    "passwordTooShort": "Das neue Passwort muss mindestens 6 Zeichen lang sein.",
+    "reauth": "Bitte melde dich erneut an, um E-Mail oder Passwort zu ändern.",
+    "saveError": "Änderungen konnten nicht gespeichert werden."
   }
 }

@@ -152,6 +152,16 @@ function Navbar() {
                                     Help Center
                                 </Link>
                             </li>
+                            <li className="nav-item">
+                                <Link
+                                    className="nav-link text-white"
+                                    to="/profile"
+                                    data-bs-dismiss="offcanvas"
+                                >
+                                    Profile
+                                </Link>
+                            </li>
+
 
                             <li className="nav-item">
                                 <Link
@@ -210,6 +220,24 @@ function Navbar() {
                                 onClick={() => changeLang("es")}
                             >
                                 ES
+                            </button>
+                            <button
+                                className={
+                                    "btn btn-sm me-2" +
+                                    (currentLang === "zh" ? "btn-light" : "btn-outline-light")
+                                }
+                                onClick={() => changeLang("zh")}
+                            >
+                                ZH
+                            </button>
+                            <button
+                                className={
+                                    "btn btn-sm " +
+                                    (currentLang === "tr" ? "btn-light" : "btn-outline-light")
+                                }
+                                onClick={() => changeLang("tr")}
+                            >
+                                TR
                             </button>
                         </div>
                     </div>

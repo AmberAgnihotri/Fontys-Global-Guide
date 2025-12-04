@@ -96,5 +96,23 @@
       "name": "Utrecht",
       "info": "Utrecht has unique canals with wharf cellars and a lively student culture."
     }
+  },
+  "profile": {
+    "title": "Profile",
+    "loading": "Loading profile…",
+    "notLoggedIn": "You need to log in to view your profile.",
+    "username": "Username / display name",
+    "email": "Email address",
+    "newPassword": "New password (optional)",
+    "confirmPassword": "Confirm new password",
+    "passwordPlaceholder": "Leave empty to keep current password",
+    "save": "Save changes",
+    "saving": "Saving…",
+    "updated": "Your profile has been updated.",
+    "notLoggedError": "You are not logged in.",
+    "passwordMismatch": "New passwords do not match.",
+    "passwordTooShort": "New password must be at least 6 characters.",
+    "reauth": "Please log out and log in again before changing email or password.",
+    "saveError": "Could not save your changes."
   }
 }

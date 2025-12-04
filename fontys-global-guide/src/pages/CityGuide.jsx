@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-// haal deze uit commentaar als je ze hebt
-// import tilburgImg from "../images/tilburg.jpg";
-// import eindhovenImg from "../images/Eindhoven.webp";
-// import sittardImg from "../images/sittard.jpg";
-// import VenloImg from "../images/Venlo.jpg";
-// import denboschImg from "../images/denbosch.webp";
-// import utrechtImg from "../images/Utrecht.webp";
+import tilburgImg from "../assets/tilburg.webp";
+import eindhovenImg from "../assets/Eindhoven.webp";
+import sittardImg from "../assets/sittard.jpg";
+import VenloImg from "../assets/Venlo.jpg";
+import denboschImg from "../assets/Denbosch.jpg";
+import utrechtImg from "../assets/Utrecht.webp";
 
 export default function CityGuide() {
     const [selectedCity, setSelectedCity] = useState(null);
@@ -195,25 +194,108 @@ export default function CityGuide() {
         );
     }
 
-    // ⭐ OVERVIEW SCREEN ⭐
+  if (selectedCity) {
+    const info = selectedCity.info;
+    
     return (
-        <div style={styles.container}>
-            <div style={styles.header}>{t("cityGuide.header")}</div>
+      <div style={styles.container}>
+        <button style={styles.backButton} onClick={() => setSelectedCity(null)}>
+          ← Back
+        </button>
 
-            <div style={styles.grid}>
-                {cities.map((city) => (
-                    <div
-                        key={city.id}
-                        onClick={() => setSelectedCity(city)}
-                        style={{
-                            ...styles.card,
-                            backgroundImage: city.image ? `url(${city.image})` : "none",
-                        }}
-                    >
-                        <div style={styles.label}>{city.name}</div>
-                    </div>
-                ))}
+        <h1>{selectedCity.name}</h1>
+
+        <img 
+          src={selectedCity.image}
+          alt={selectedCity.name}
+          style={styles.detailImage}
+        />
+
+        <div>
+          <h3>About {selectedCity.name}</h3>
+          <p>{info.about}</p>
+
+          {info.housing && (
+            <>
+              <h3>Housing</h3>
+              <p>{info.housing}</p>
+            </>
+          )}
+
+          {info.housingLinks && (
+            <div style={{ marginBottom: 20 }}>
+              <h4>Find available housing:</h4>
+              {info.housingLinks.map((link, index) => (
+                <a 
+                  key={index}
+                  href={link.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  style={{
+                    display: "inline-block",
+                    margin: "5px 8px 5px 0",
+                    padding: "8px 14px",
+                    background: "#67327a",
+                    color: "white",
+                    textDecoration: "none",
+                    borderRadius: 6,
+                    fontSize: 14,
+                  }}
+                >
+                  {link.label}
+                </a>
+              ))}
             </div>
+          )}
+
+          {info.transport && (
+            <>
+              <h3>Transportation</h3>
+              <p>{info.transport}</p>
+            </>
+          )}
+
+          {info.highlights && (
+            <>
+              <h3>Hotspots</h3>
+              <ul>
+                {info.highlights.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </>
+          )}
+
+          <h3>Fontys Locations</h3>
+          <p>{info.fontys}</p>
+          <ul>
+            {info.fontysLocations.map((location, index) => (
+              <li key={index}>{location}</li>
+            ))}
+          </ul>
         </div>
+      </div>
     );
+  }
+
+  return (
+    <div style={styles.container}>
+      <div style={styles.header}>City Guide & Housing</div>
+
+      <div style={styles.grid}>
+        {cities.map((city) => (
+          <div
+            key={city.name}
+            onClick={() => setSelectedCity(city)}
+            style={{
+              ...styles.card,
+              backgroundImage: city.image ? `url(${city.image})` : "none",
+            }}
+          >
+            <div style={styles.label}>{city.name}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
