@@ -17,10 +17,17 @@
     "@fortawesome/react-fontawesome": "^3.1.1",
     "bootstrap": "^5.3.8",
     "firebase": "^12.6.0",
+<<<<<<< HEAD
     "leaflet": "^1.9.4",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-leaflet": "^5.0.0",
+=======
+    "i18next": "^25.7.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-i18next": "^16.3.5",
+>>>>>>> 4181181d2feba726a2adb0153d7db513d3f6a705
     "react-router-dom": "^7.9.6"
   },
   "devDependencies": {

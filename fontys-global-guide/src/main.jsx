@@ -5,6 +5,13 @@ import { BrowserRouter } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import "./i18n.js";
+import i18n from "i18next";
+
+const savedLang = localStorage.getItem("lang");
+if (savedLang) {
+  i18n.changeLanguage(savedLang);
+}
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>

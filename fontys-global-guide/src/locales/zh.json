@@ -1,0 +1,96 @@
+{
+  "home": {
+    "title": "欢迎来到 Fontys 全球指南",
+    "intro": "这是为 Fontys 国际学生打造的一站式应用程序。我们帮助你解决住宿、行政手续、城市探索以及与其他学生建立联系——一切尽在一处。",
+    "missionTitle": "我们的使命",
+    "missionText": "在一个新的国家开始学习可能会让人感到不安。Fontys 全球指南通过清晰的信息、实用的工具和强大的学生社区来支持国际学生。你顺利开始所需要的一切，都在这个应用中。",
+    "futureTitle": "一起建设你的未来",
+    "futureText": "我们相信，当学生感到被支持和彼此连接时，他们能够取得更好的成功。通过 Fontys 全球指南，我们致力于提升学生体验，加强国际学生社群，并帮助你在 Fontys 的学习生涯中不断成长。"
+  },
+
+  "studentCommunity": {
+    "title": "学生社区",
+    "noMessages": "此频道目前还没有消息。",
+    "placeholder": "输入消息..."
+  },
+
+  "expense": {
+    "title": "学生支出管理",
+    "converter": "货币转换器",
+    "from": "从",
+    "to": "到",
+    "amount": "金额",
+    "converted": "转换后金额",
+    "swap": "切换货币",
+    "refresh": "刷新汇率",
+    "refreshing": "刷新中...",
+    "exchangeRate": "汇率",
+    "lastUpdated": "最后更新时间",
+    "addExpense": "添加新支出",
+    "description": "描述",
+    "category": "类别",
+    "addBtn": "添加",
+    "summary": "支出总结",
+    "total": "总计",
+    "list": "支出列表",
+    "noExpenses": "还没有支出记录，请先添加一笔！",
+    "date": "日期",
+    "action": "操作",
+    "delete": "删除",
+
+    "categories": {
+      "housing": "住宿",
+      "food": "饮食",
+      "transport": "交通",
+      "study": "学习",
+      "entertainment": "娱乐",
+      "healthcare": "医疗",
+      "other": "其他"
+    }
+  },
+
+  "cityGuide": {
+    "header": "城市指南与住宿",
+    "back": "返回",
+    "sections": {
+      "about": "关于 {{city}}",
+      "housing": "住宿",
+      "transport": "交通",
+      "highlights": "重要地点",
+      "housingLinksTitle": "查看可用的住房平台："
+    },
+    "tilburg": {
+      "name": "蒂尔堡",
+      "info": "蒂尔堡以其充满活力的市中心和友好的学生氛围而闻名。"
+    },
+    "eindhoven": {
+      "name": "埃因霍温",
+      "intro": "埃因霍温是荷兰的“光之城”，以科技、设计和创新著称。",
+      "housing": "平均租金约为每月 900–1300 欧元，视地区和房型而定。",
+      "transport": "埃因霍温拥有大型火车站、多条公交线路以及国际机场。",
+      "highlights": [
+        "飞利浦博物馆",
+        "Strijp-S",
+        "高科技园区",
+        "Effenaar 音乐厅",
+        "PSV 体育场"
+      ]
+    },
+    "sittard": {
+      "name": "锡塔德",
+      "info": "锡塔德是一座安静而具有历史风情的城市。"
+    },
+    "venlo": {
+      "name": "芬洛",
+      "info": "芬洛靠近德国边境，周围自然环境优美。"
+    },
+    "denbosch": {
+      "name": "斯海尔托亨博斯",
+      "info": "以 Bossche Bol 甜点和历史悠久的老城区闻名。"
+    },
+    "utrecht": {
+      "name": "乌特勒支",
+      "info": "乌特勒支拥有独特的运河和充满活力的学生文化。"
+    }
+  }
+}
