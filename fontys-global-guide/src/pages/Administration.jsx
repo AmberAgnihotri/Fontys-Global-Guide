@@ -1,24 +1,24 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 // import checklistPdf from "../../assets/checklist.pdf";
-import "../styles/Administration.css"; // Import the CSS file
+import "../styles/Administration.css";
 
 export default function Administration() {
   const [showPDF, setShowPDF] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <>
       <div className="admin-container">
         <div className="admin-content">
           <div className="admin-info">
-            Op deze pagina komt de administratie. Hier staat wat een
-            internationale student moet regelen voordat die in Nederland komt
-            studeren.
+            {t("administration.info")}
           </div>
         </div>
 
         {/* Button at the Bottom */}
         <button onClick={() => setShowPDF(true)} className="admin-button">
-          Checklist
+          {t("administration.checklist")}
         </button>
       </div>
 
@@ -26,7 +26,7 @@ export default function Administration() {
         <div className="pdf-overlay">
           {/* Back Button */}
           <button onClick={() => setShowPDF(false)} className="back-button">
-            ← Terug
+            ← {t("administration.back")}
           </button>
 
           {/* PDF iframe */}
@@ -39,7 +39,7 @@ export default function Administration() {
           {/* Fallback Link */}
           <div className="fallback-link">
             <a href={checklistPdf} target="_blank" rel="noreferrer">
-              Open PDF in nieuw tabblad
+              {t("administration.openPdf")}
             </a>
           </div>
         </div>

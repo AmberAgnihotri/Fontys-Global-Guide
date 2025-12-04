@@ -13,5 +13,88 @@
     "title": "Student Community",
     "noMessages": "No messages yet in this channel.",
     "placeholder": "Message..."
+  },
+  "administration": {
+    "info": "On this page you will find all the administration you need to arrange before starting your studies in the Netherlands.",
+    "checklist": "Checklist",
+    "back": "Back",
+    "openPdf": "Open PDF in new tab"
+  },
+  "expense": {
+    "title": "Expense Tracker for International Students",
+    "converter": "Currency Converter",
+    "from": "From Currency",
+    "to": "To Currency",
+    "amount": "Amount",
+    "converted": "Converted Amount",
+    "swap": "Swap Currencies",
+    "refresh": "Refresh Rates",
+    "refreshing": "Refreshing...",
+    "exchangeRate": "Exchange Rate",
+    "lastUpdated": "Last updated",
+    "addExpense": "Add New Expense",
+    "description": "Description",
+    "addBtn": "Add Expense",
+    "summary": "Summary",
+    "total": "Total",
+    "list": "Expense List",
+    "noExpenses": "No expenses yet. Add your first expense above!",
+    "date": "Date",
+    "category": "Category",
+    "action": "Action",
+    "delete": "Delete",
+    "categories": {
+      "housing": "Housing",
+      "food": "Food",
+      "transport": "Transport",
+      "study": "Study",
+      "entertainment": "Entertainment",
+      "healthcare": "Healthcare",
+      "other": "Other"
+    }
+  },
+  "cityGuide": {
+    "header": "City Guide & Housing",
+    "back": "Back",
+    "sections": {
+      "about": "About {{city}}",
+      "housing": "Housing",
+      "transport": "Transport",
+      "highlights": "Highlights",
+      "housingLinksTitle": "Check available housing platforms:"
+    },
+    "tilburg": {
+      "name": "Tilburg",
+      "info": "Tilburg is known for its vibrant city centre and student-friendly atmosphere."
+    },
+    "eindhoven": {
+      "name": "Eindhoven",
+      "intro": "Eindhoven is the city of light, known for technology, design and innovation.",
+      "housing": "Average rent ranges between €900–€1300 per month, depending on the neighbourhood and type of accommodation.",
+      "transport": "Eindhoven has a major train station, many bus lines and an international airport.",
+      "highlights": [
+        "Philips Museum",
+        "Strijp-S",
+        "High Tech Campus",
+        "Effenaar",
+        "PSV Stadium"
+      ]
+    },
+    "sittard": {
+      "name": "Sittard",
+      "info": "Sittard is a quiet, historic city with a cosy city centre."
+    },
+    "venlo": {
+      "name": "Venlo",
+      "info": "Venlo is close to the German border and surrounded by nature."
+    },
+    "denbosch": {
+      "name": "’s-Hertogenbosch",
+      "info": "Known for the Bossche Bol pastry and its historic inner city."
+    },
+    "utrecht": {
+      "name": "Utrecht",
+      "info": "Utrecht has unique canals with wharf cellars and a lively student culture."
+    }
   }
 }

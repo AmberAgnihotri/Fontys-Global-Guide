@@ -14,5 +14,88 @@
     "title": "Communauté étudiante",
     "noMessages": "Aucun message dans ce canal pour le moment.",
     "placeholder": "Message..."
+  },
+  "administration": {
+    "info": "Sur cette page, tu trouveras toutes les démarches administratives à effectuer avant de commencer tes études aux Pays-Bas.",
+    "checklist": "Liste de contrôle",
+    "back": "Retour",
+    "openPdf": "Ouvrir le PDF dans un nouvel onglet"
+  },
+  "expense": {
+    "title": "Suivi des dépenses pour les étudiants internationaux",
+    "converter": "Convertisseur de devises",
+    "from": "De la devise",
+    "to": "Vers la devise",
+    "amount": "Montant",
+    "converted": "Montant converti",
+    "swap": "Échanger les devises",
+    "refresh": "Actualiser les taux",
+    "refreshing": "Actualisation...",
+    "exchangeRate": "Taux de change",
+    "lastUpdated": "Dernière mise à jour",
+    "addExpense": "Ajouter une nouvelle dépense",
+    "description": "Description",
+    "addBtn": "Ajouter une dépense",
+    "summary": "Résumé",
+    "total": "Total",
+    "list": "Liste des dépenses",
+    "noExpenses": "Aucune dépense pour le moment. Ajoute ta première dépense !",
+    "date": "Date",
+    "category": "Catégorie",
+    "action": "Action",
+    "delete": "Supprimer",
+    "categories": {
+      "housing": "Logement",
+      "food": "Nourriture",
+      "transport": "Transport",
+      "study": "Études",
+      "entertainment": "Divertissement",
+      "healthcare": "Soins de santé",
+      "other": "Autre"
+    }
+  },
+  "cityGuide": {
+    "header": "City Guide & Logement",
+    "back": "Retour",
+    "sections": {
+      "about": "À propos de {{city}}",
+      "housing": "Logement",
+      "transport": "Transports",
+      "highlights": "Lieux importants",
+      "housingLinksTitle": "Voir les plateformes de logement disponibles :"
+    },
+    "tilburg": {
+      "name": "Tilburg",
+      "info": "Tilburg est connue pour son centre-ville animé et son ambiance étudiante."
+    },
+    "eindhoven": {
+      "name": "Eindhoven",
+      "intro": "Eindhoven est la ville de la lumière, connue pour la technologie, le design et l’innovation.",
+      "housing": "Le loyer moyen se situe entre 900 € et 1300 € par mois, selon le quartier et le type de logement.",
+      "transport": "Eindhoven dispose d’une grande gare, de nombreuses lignes de bus et d’un aéroport international.",
+      "highlights": [
+        "Philips Museum",
+        "Strijp-S",
+        "High Tech Campus",
+        "Effenaar",
+        "Stade du PSV"
+      ]
+    },
+    "sittard": {
+      "name": "Sittard",
+      "info": "Sittard est une ville calme et historique avec un centre-ville chaleureux."
+    },
+    "venlo": {
+      "name": "Venlo",
+      "info": "Venlo est proche de la frontière allemande et entourée de nature."
+    },
+    "denbosch": {
+      "name": "’s-Hertogenbosch",
+      "info": "Connue pour la pâtisserie « Bossche Bol » et son centre historique."
+    },
+    "utrecht": {
+      "name": "Utrecht",
+      "info": "Utrecht possède des canaux uniques avec caves sur quai et une vie étudiante animée."
+    }
   }
 }

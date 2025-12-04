@@ -13,5 +13,88 @@
     "title": "Studentencommunity",
     "noMessages": "Nog geen berichten in dit kanaal.",
     "placeholder": "Bericht..."
+  },
+  "administration": {
+    "info": "Op deze pagina komt de administratie. Hier staat wat een internationale student moet regelen voordat die in Nederland komt studeren.",
+    "checklist": "Checklist",
+    "back": "Terug",
+    "openPdf": "Open PDF in nieuw tabblad"
+  },
+  "expense": {
+    "title": "Uitgaven Tracker voor Internationale Studenten",
+    "converter": "Valutaconverter",
+    "from": "Van valuta",
+    "to": "Naar valuta",
+    "amount": "Bedrag",
+    "converted": "Omgerekend bedrag",
+    "swap": "Valuta wisselen",
+    "refresh": "Koersen vernieuwen",
+    "refreshing": "Bezig met vernieuwen...",
+    "exchangeRate": "Wisselkoers",
+    "lastUpdated": "Laatst bijgewerkt",
+    "addExpense": "Nieuwe uitgave toevoegen",
+    "description": "Beschrijving",
+    "addBtn": "Uitgave toevoegen",
+    "summary": "Overzicht",
+    "total": "Totaal",
+    "list": "Uitgavenlijst",
+    "noExpenses": "Nog geen uitgaven. Voeg je eerste uitgave toe!",
+    "date": "Datum",
+    "category": "Categorie",
+    "action": "Actie",
+    "delete": "Verwijderen",
+    "categories": {
+      "housing": "Wonen",
+      "food": "Eten",
+      "transport": "Vervoer",
+      "study": "Studie",
+      "entertainment": "Entertainment",
+      "healthcare": "Gezondheidszorg",
+      "other": "Overig"
+    }
+  },
+  "cityGuide": {
+    "header": "City Guide & Housing",
+    "back": "Terug",
+    "sections": {
+      "about": "Over {{city}}",
+      "housing": "Wonen",
+      "transport": "Vervoer",
+      "highlights": "Belangrijke plekken",
+      "housingLinksTitle": "Bekijk beschikbare woningplatforms:"
+    },
+    "tilburg": {
+      "name": "Tilburg",
+      "info": "Tilburg staat bekend om het bruisende centrum en de studentvriendelijke sfeer."
+    },
+    "eindhoven": {
+      "name": "Eindhoven",
+      "intro": "Eindhoven is de lichtstad van Nederland en staat bekend om technologie, design en innovatie.",
+      "housing": "De gemiddelde huur ligt rond €900–€1300 per maand, afhankelijk van de wijk en het type woning.",
+      "transport": "Eindhoven heeft een groot treinstation, veel buslijnen en een internationale luchthaven.",
+      "highlights": [
+        "Philips Museum",
+        "Strijp-S",
+        "High Tech Campus",
+        "Effenaar",
+        "PSV Stadion"
+      ]
+    },
+    "sittard": {
+      "name": "Sittard",
+      "info": "Sittard is een rustige, historische stad met een gezellig centrum."
+    },
+    "venlo": {
+      "name": "Venlo",
+      "info": "Venlo ligt dicht bij de Duitse grens en is omringd door veel natuur."
+    },
+    "denbosch": {
+      "name": "’s-Hertogenbosch",
+      "info": "Bekend om de Bossche bol en de historische binnenstad."
+    },
+    "utrecht": {
+      "name": "Utrecht",
+      "info": "Utrecht heeft unieke grachten met werfkelders en een levendige studentencultuur."
+    }
   }
 }

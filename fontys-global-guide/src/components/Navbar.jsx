@@ -11,6 +11,7 @@ function Navbar() {
         localStorage.setItem("lang", lang);
     };
 
+
     return (
         <nav className="navbar" style={{ backgroundColor: "#663366" }}>
             <div className="container-fluid">
@@ -163,7 +164,6 @@ function Navbar() {
                             </li>
                         </ul>
 
-                        {/* LANGUAGE SWITCHER */}
                         <div className="mt-4 text-center">
                             <p className="text-white mb-2">Language</p>
                             <button
@@ -177,7 +177,7 @@ function Navbar() {
                             </button>
                             <button
                                 className={
-                                    "btn btn-sm " +
+                                    "btn btn-sm me-2 " +
                                     (currentLang === "nl" ? "btn-light" : "btn-outline-light")
                                 }
                                 onClick={() => changeLang("nl")}
@@ -186,7 +186,7 @@ function Navbar() {
                             </button>
                             <button
                                 className={
-                                    "btn btn-sm " +
+                                    "btn btn-sm me-2" +
                                     (currentLang === "de" ? "btn-light" : "btn-outline-light")
                                 }
                                 onClick={() => changeLang("de")}
@@ -195,14 +195,22 @@ function Navbar() {
                             </button>
                             <button
                                 className={
-                                    "btn btn-sm " +
+                                    "btn btn-sm me-2" +
                                     (currentLang === "fr" ? "btn-light" : "btn-outline-light")
                                 }
                                 onClick={() => changeLang("fr")}
                             >
                                 FR
                             </button>
-
+                            <button
+                                className={
+                                    "btn btn-sm me-2" +
+                                    (currentLang === "es" ? "btn-light" : "btn-outline-light")
+                                }
+                                onClick={() => changeLang("es")}
+                            >
+                                ES
+                            </button>
                         </div>
                     </div>
                 </div>
