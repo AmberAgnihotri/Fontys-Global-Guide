@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
-import tilburgImg from "../images/tilburg.jpg";
-import eindhovenImg from "../images/Eindhoven.webp";
-import sittardImg from "../images/sittard.jpg";
-import VenloImg from "../images/Venlo.jpg";
-import denboschImg from "../images/denbosch.webp";
-import utrechtImg from "../images/Utrecht.webp";
+// import tilburgImg from "../images/tilburg.jpg";
+// import eindhovenImg from "../images/Eindhoven.webp";
+// import sittardImg from "../images/sittard.jpg";
+// import VenloImg from "../images/Venlo.jpg";
+// import denboschImg from "../images/denbosch.webp";
+// import utrechtImg from "../images/Utrecht.webp";
 
 export default function CityGuide() {
   const [selectedCity, setSelectedCity] = useState(null);
