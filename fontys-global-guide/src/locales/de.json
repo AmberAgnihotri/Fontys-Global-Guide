@@ -1,0 +1,119 @@
+{
+  "home": {
+    "title": "Willkommen beim Fontys Global Guide",
+    "intro": "Die All-in-One-App für internationale Studierende an der Fontys. Wir helfen dir bei Wohnen, Verwaltung, dem Erkunden der Stadt und beim Vernetzen mit anderen Studierenden – alles an einem Ort.",
+
+    "missionTitle": "Unsere Mission",
+    "missionText": "Ein Studium in einem neuen Land kann überwältigend sein. Fontys Global Guide unterstützt internationale Studierende mit klaren Informationen, hilfreichen Tools und einer starken Community. Alles, was du für einen guten Start brauchst, in einer App.",
+
+    "futureTitle": "Gemeinsam deine Zukunft gestalten",
+    "futureText": "Wir glauben, dass Studierende erfolgreicher sind, wenn sie sich unterstützt und verbunden fühlen. Mit dem Fontys Global Guide wollen wir das Studienerlebnis verbessern, die internationale Community stärken und dir helfen, während deiner Zeit an der Fontys zu wachsen."
+  },
+
+  "studentCommunity": {
+    "title": "Studenten-Community",
+    "noMessages": "Noch keine Nachrichten in diesem Kanal.",
+    "placeholder": "Nachricht..."
+  },
+  "administration": {
+    "info": "Auf dieser Seite findest du alle administrativen Dinge, die du vor Beginn deines Studiums in den Niederlanden regeln musst.",
+    "checklist": "Checkliste",
+    "back": "Zurück",
+    "openPdf": "PDF in neuem Tab öffnen"
+  },
+  "expense": {
+    "title": "Ausgaben-Tracker für internationale Studierende",
+    "converter": "Währungsrechner",
+    "from": "Von Währung",
+    "to": "Zu Währung",
+    "amount": "Betrag",
+    "converted": "Umgerechneter Betrag",
+    "swap": "Währungen tauschen",
+    "refresh": "Kurse aktualisieren",
+    "refreshing": "Wird aktualisiert...",
+    "exchangeRate": "Wechselkurs",
+    "lastUpdated": "Zuletzt aktualisiert",
+    "addExpense": "Neue Ausgabe hinzufügen",
+    "description": "Beschreibung",
+    "addBtn": "Ausgabe hinzufügen",
+    "summary": "Übersicht",
+    "total": "Gesamt",
+    "list": "Ausgabenliste",
+    "noExpenses": "Noch keine Ausgaben. Füge deine erste Ausgabe hinzu!",
+    "date": "Datum",
+    "category": "Kategorie",
+    "action": "Aktion",
+    "delete": "Löschen",
+    "categories": {
+      "housing": "Wohnen",
+      "food": "Essen",
+      "transport": "Transport",
+      "study": "Studium",
+      "entertainment": "Unterhaltung",
+      "healthcare": "Gesundheit",
+      "other": "Sonstiges"
+    }
+  },
+  "cityGuide": {
+    "header": "City Guide & Wohnen",
+    "back": "Zurück",
+    "sections": {
+      "about": "Über {{city}}",
+      "housing": "Wohnen",
+      "transport": "Verkehr",
+      "highlights": "Highlights",
+      "housingLinksTitle": "Verfügbare Wohnungsplattformen ansehen:"
+    },
+    "tilburg": {
+      "name": "Tilburg",
+      "info": "Tilburg ist bekannt für das lebendige Stadtzentrum und eine studentische Atmosphäre."
+    },
+    "eindhoven": {
+      "name": "Eindhoven",
+      "intro": "Eindhoven ist die Lichtstadt der Niederlande und bekannt für Technologie, Design und Innovation.",
+      "housing": "Die durchschnittliche Miete liegt etwa zwischen 900–1300 € pro Monat, je nach Stadtteil und Unterkunft.",
+      "transport": "Eindhoven hat einen großen Bahnhof, viele Buslinien und einen internationalen Flughafen.",
+      "highlights": [
+        "Philips Museum",
+        "Strijp-S",
+        "High Tech Campus",
+        "Effenaar",
+        "PSV Stadion"
+      ]
+    },
+    "sittard": {
+      "name": "Sittard",
+      "info": "Sittard ist eine ruhige, historische Stadt mit einer gemütlichen Innenstadt."
+    },
+    "venlo": {
+      "name": "Venlo",
+      "info": "Venlo liegt nahe der deutschen Grenze und ist von viel Natur umgeben."
+    },
+    "denbosch": {
+      "name": "’s-Hertogenbosch",
+      "info": "Bekannt für die „Bossche Bol“ und die historische Altstadt."
+    },
+    "utrecht": {
+      "name": "Utrecht",
+      "info": "Utrecht hat einzigartige Grachten mit Werfkellern und eine lebendige Studentenkultur."
+    }
+  },
+  "profile": {
+    "title": "Profil",
+    "loading": "Profil wird geladen…",
+    "notLoggedIn": "Du musst eingeloggt sein, um dein Profil zu sehen.",
+    "username": "Benutzername / Anzeigename",
+    "email": "E-Mail-Adresse",
+    "newPassword": "Neues Passwort (optional)",
+    "confirmPassword": "Neues Passwort bestätigen",
+    "passwordPlaceholder": "Leer lassen, um das aktuelle Passwort zu behalten",
+    "save": "Änderungen speichern",
+    "saving": "Speichern…",
+    "updated": "Dein Profil wurde aktualisiert.",
+    "notLoggedError": "Du bist nicht eingeloggt.",
+    "passwordMismatch": "Die neuen Passwörter stimmen nicht überein.",
+    "passwordTooShort": "Das neue Passwort muss mindestens 6 Zeichen lang sein.",
+    "reauth": "Bitte melde dich erneut an, um E-Mail oder Passwort zu ändern.",
+    "saveError": "Änderungen konnten nicht gespeichert werden."
+  }
+}

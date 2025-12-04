@@ -1,0 +1,96 @@
+{
+  "home": {
+    "title": "Fontys Global Guide'a Hoş Geldiniz",
+    "intro": "Fontys'teki uluslararası öğrenciler için hepsi bir arada uygulama. Konaklama, resmi işlemler, şehir keşfi ve diğer öğrencilerle bağlantı kurma konularında size yardımcı oluyoruz — hepsi tek bir yerde.",
+    "missionTitle": "Misyonumuz",
+    "missionText": "Yeni bir ülkede eğitime başlamak zorlayıcı olabilir. Fontys Global Guide, uluslararası öğrencileri net bilgiler, faydalı araçlar ve güçlü bir topluluk ile destekler. Sorunsuz bir başlangıç için ihtiyacınız olan her şey tek bir uygulamada.",
+    "futureTitle": "Geleceğinizi Birlikte İnşa Ediyoruz",
+    "futureText": "Öğrencilerin kendilerini desteklenmiş ve bağlı hissettiklerinde daha başarılı olduğuna inanıyoruz. Fontys Global Guide ile öğrenci deneyimini geliştirmeyi, uluslararası topluluğu güçlendirmeyi ve Fontys'teki süreniz boyunca gelişmenizi amaçlıyoruz."
+  },
+
+  "studentCommunity": {
+    "title": "Öğrenci Topluluğu",
+    "noMessages": "Bu kanalda henüz mesaj yok.",
+    "placeholder": "Mesaj yaz..."
+  },
+
+  "expense": {
+    "title": "Öğrenci Gider Takibi",
+    "converter": "Döviz Çevirici",
+    "from": "Kaynak Para",
+    "to": "Hedef Para",
+    "amount": "Tutar",
+    "converted": "Çevrilen Tutar",
+    "swap": "Para Birimini Değiştir",
+    "refresh": "Kurları Yenile",
+    "refreshing": "Yenileniyor...",
+    "exchangeRate": "Döviz Kuru",
+    "lastUpdated": "Son Güncelleme",
+    "addExpense": "Yeni Gider Ekle",
+    "description": "Açıklama",
+    "category": "Kategori",
+    "addBtn": "Ekle",
+    "summary": "Gider Özeti",
+    "total": "Toplam",
+    "list": "Gider Listesi",
+    "noExpenses": "Henüz gider eklenmedi. İlk giderini ekle!",
+    "date": "Tarih",
+    "action": "İşlem",
+    "delete": "Sil",
+
+    "categories": {
+      "housing": "Konaklama",
+      "food": "Yiyecek",
+      "transport": "Ulaşım",
+      "study": "Eğitim",
+      "entertainment": "Eğlence",
+      "healthcare": "Sağlık",
+      "other": "Diğer"
+    }
+  },
+
+  "cityGuide": {
+    "header": "Şehir Rehberi ve Konaklama",
+    "back": "Geri",
+    "sections": {
+      "about": "{{city}} Hakkında",
+      "housing": "Konaklama",
+      "transport": "Ulaşım",
+      "highlights": "Önemli Yerler",
+      "housingLinksTitle": "Mevcut konut platformlarını inceleyin:"
+    },
+    "tilburg": {
+      "name": "Tilburg",
+      "info": "Tilburg canlı şehir merkezi ve öğrenci dostu atmosferi ile bilinir."
+    },
+    "eindhoven": {
+      "name": "Eindhoven",
+      "intro": "Eindhoven, teknoloji, tasarım ve inovasyon ile tanınan Hollanda'nın ışık şehridir.",
+      "housing": "Ortalama kira, semte ve konuta bağlı olarak aylık 900–1300 € arasındadır.",
+      "transport": "Eindhoven büyük bir tren istasyonuna, birçok otobüs hattına ve uluslararası bir havalimanına sahiptir.",
+      "highlights": [
+        "Philips Müzesi",
+        "Strijp-S",
+        "High Tech Campus",
+        "Effenaar",
+        "PSV Stadyumu"
+      ]
+    },
+    "sittard": {
+      "name": "Sittard",
+      "info": "Sittard sakin, tarihi bir şehirdir ve huzurlu bir merkeze sahiptir."
+    },
+    "venlo": {
+      "name": "Venlo",
+      "info": "Venlo Almanya sınırına yakındır ve doğayla çevrilidir."
+    },
+    "denbosch": {
+      "name": "’s-Hertogenbosch",
+      "info": "Bossche Bol tatlısı ve tarihi şehir merkezi ile ünlüdür."
+    },
+    "utrecht": {
+      "name": "Utrecht",
+      "info": "Utrecht eşsiz kanallara ve canlı bir öğrenci kültürüne sahiptir."
+    }
+  }
+}
