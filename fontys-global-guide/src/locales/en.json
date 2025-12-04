@@ -1,0 +1,118 @@
+{
+  "home": {
+    "title": "Welcome to Fontys Global Guide",
+    "intro": "The all-in-one app for international students at Fontys. We help you with housing, administration, exploring the city and connecting with other students — all in one place.",
+
+    "missionTitle": "Our Mission",
+    "missionText": "Starting your studies in a new country can feel overwhelming. Fontys Global Guide is here to support international students with clear information, helpful tools and a strong community. Everything you need for a smooth start, all in one app.",
+
+    "futureTitle": "Building Your Future Together",
+    "futureText": "We believe students succeed best when they feel supported and connected. With Fontys Global Guide, we aim to improve the student experience, strengthen the international community and help you grow during your time at Fontys."
+  },
+  "studentCommunity": {
+    "title": "Student Community",
+    "noMessages": "No messages yet in this channel.",
+    "placeholder": "Message..."
+  },
+  "administration": {
+    "info": "On this page you will find all the administration you need to arrange before starting your studies in the Netherlands.",
+    "checklist": "Checklist",
+    "back": "Back",
+    "openPdf": "Open PDF in new tab"
+  },
+  "expense": {
+    "title": "Expense Tracker for International Students",
+    "converter": "Currency Converter",
+    "from": "From Currency",
+    "to": "To Currency",
+    "amount": "Amount",
+    "converted": "Converted Amount",
+    "swap": "Swap Currencies",
+    "refresh": "Refresh Rates",
+    "refreshing": "Refreshing...",
+    "exchangeRate": "Exchange Rate",
+    "lastUpdated": "Last updated",
+    "addExpense": "Add New Expense",
+    "description": "Description",
+    "addBtn": "Add Expense",
+    "summary": "Summary",
+    "total": "Total",
+    "list": "Expense List",
+    "noExpenses": "No expenses yet. Add your first expense above!",
+    "date": "Date",
+    "category": "Category",
+    "action": "Action",
+    "delete": "Delete",
+    "categories": {
+      "housing": "Housing",
+      "food": "Food",
+      "transport": "Transport",
+      "study": "Study",
+      "entertainment": "Entertainment",
+      "healthcare": "Healthcare",
+      "other": "Other"
+    }
+  },
+  "cityGuide": {
+    "header": "City Guide & Housing",
+    "back": "Back",
+    "sections": {
+      "about": "About {{city}}",
+      "housing": "Housing",
+      "transport": "Transport",
+      "highlights": "Highlights",
+      "housingLinksTitle": "Check available housing platforms:"
+    },
+    "tilburg": {
+      "name": "Tilburg",
+      "info": "Tilburg is known for its vibrant city centre and student-friendly atmosphere."
+    },
+    "eindhoven": {
+      "name": "Eindhoven",
+      "intro": "Eindhoven is the city of light, known for technology, design and innovation.",
+      "housing": "Average rent ranges between €900–€1300 per month, depending on the neighbourhood and type of accommodation.",
+      "transport": "Eindhoven has a major train station, many bus lines and an international airport.",
+      "highlights": [
+        "Philips Museum",
+        "Strijp-S",
+        "High Tech Campus",
+        "Effenaar",
+        "PSV Stadium"
+      ]
+    },
+    "sittard": {
+      "name": "Sittard",
+      "info": "Sittard is a quiet, historic city with a cosy city centre."
+    },
+    "venlo": {
+      "name": "Venlo",
+      "info": "Venlo is close to the German border and surrounded by nature."
+    },
+    "denbosch": {
+      "name": "’s-Hertogenbosch",
+      "info": "Known for the Bossche Bol pastry and its historic inner city."
+    },
+    "utrecht": {
+      "name": "Utrecht",
+      "info": "Utrecht has unique canals with wharf cellars and a lively student culture."
+    }
+  },
+  "profile": {
+    "title": "Profile",
+    "loading": "Loading profile…",
+    "notLoggedIn": "You need to log in to view your profile.",
+    "username": "Username / display name",
+    "email": "Email address",
+    "newPassword": "New password (optional)",
+    "confirmPassword": "Confirm new password",
+    "passwordPlaceholder": "Leave empty to keep current password",
+    "save": "Save changes",
+    "saving": "Saving…",
+    "updated": "Your profile has been updated.",
+    "notLoggedError": "You are not logged in.",
+    "passwordMismatch": "New passwords do not match.",
+    "passwordTooShort": "New password must be at least 6 characters.",
+    "reauth": "Please log out and log in again before changing email or password.",
+    "saveError": "Could not save your changes."
+  }
+}
