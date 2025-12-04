@@ -8,25 +8,26 @@ import Housing from "./pages/Housing.jsx";
 import HelpCenter from "./pages/HelpCenter.jsx";
 import StudentCommunity from "./pages/StudentCommunity.jsx";
 import Navbar from "./components/Navbar.jsx";
-import fontysDiscover from "./pages/fontysDiscover.jsx";
-import campusExplorer from "./pages/campusExplorer.jsx";
-import expenseTracker from "./pages/expenseTracker.jsx";
+import FontysDiscover from "./pages/FontysDiscover.jsx";
+import CampusExplorer from "./pages/CampusExplorer.jsx";
+import ExpenseTracker from "./pages/expenseTracker.jsx";
+
 
 function App() {
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<CityGuide />} />
         <Route path="/city-guide" element={<CityGuide />} />
         <Route path="/housing" element={<Housing />} />
         <Route path="/administration" element={<Administration />} />
         <Route path="/student-community" element={<StudentCommunity />} />
-        <Route path="/fontys-discover" element={<fontysDiscover />} />
-        <Route path="/campus-explorer" element={<campusExplorer />} />
-        <Route path="/expense-tracker" element={<expenseTracker />} />
+        <Route path="/fontys-discover" element={<FontysDiscover />} />
+        <Route path="/campus-explorer" element={<CampusExplorer />} />
+        <Route path="/expense-tracker" element={<ExpenseTracker />} />
         <Route path="/help-center" element={<HelpCenter />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/log-out" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
       </Routes>
     </>

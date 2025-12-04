@@ -5,15 +5,19 @@ import {
     doc,
     query,
     orderBy,
-    onSnapshot
+    onSnapshot,
+    addDoc,
+    serverTimestamp
 } from "firebase/firestore";
+import '../styles/StudentCommunity.css';
 
 function StudentCommunity() {
     const [channels, setChannels] = useState([]);
     const [selectedChannelId, setSelectedChannelId] = useState("general");
     const [messages, setMessages] = useState([]);
+    const [newMessage, setNewMessage] = useState("");
 
-
+    // 1) Channels ophalen
     useEffect(() => {
         const channelsRef = collection(db, "channels");
         const unsubscribe = onSnapshot(channelsRef, (snapshot) => {
@@ -27,7 +31,7 @@ function StudentCommunity() {
         return () => unsubscribe();
     }, []);
 
-    // 2) Load messages for the selected channel
+    // 2) Messages ophalen voor geselecteerde channel
     useEffect(() => {
         if (!selectedChannelId) return;
 
@@ -46,6 +50,29 @@ function StudentCommunity() {
 
         return () => unsubscribe();
     }, [selectedChannelId]);
+
+    // 3) Bericht versturen
+    const handleSendMessage = async (e) => {
+        e.preventDefault();
+
+        const text = newMessage.trim();
+        if (!text || !selectedChannelId) return;
+
+        try {
+            const channelRef = doc(db, "channels", selectedChannelId);
+            const messagesRef = collection(channelRef, "messages");
+
+            await addDoc(messagesRef, {
+                userId: "testUser123",   // later vervangen door echte userId
+                text,
+                createdAt: serverTimestamp(),
+            });
+
+            setNewMessage("");
+        } catch (err) {
+            console.error("Error sending message:", err);
+        }
+    };
 
     return (
         <div className="container mt-4">
@@ -68,26 +95,59 @@ function StudentCommunity() {
             </div>
 
             {/* MESSAGES */}
-            <div className="card">
-                <div className="card-body" style={{ maxHeight: "60vh", overflowY: "auto" }}>
+            <div className="card chat-card">
+                <div className="chat-messages">
                     {messages.length === 0 && (
                         <p className="text-muted">No messages yet in this channel.</p>
                     )}
 
-                    {messages.map((msg) => (
-                        <div key={msg.id} className="mb-2">
-                            <div className="small text-muted">
-                                {msg.userId || "Unknown user"} •{" "}
-                                {msg.createdAt?.toDate
-                                    ? msg.createdAt.toDate().toLocaleString()
-                                    : "just now"}
+                    {messages.map((msg) => {
+                        const isOwn = msg.userId === "testUser123"; // later: auth.currentUser.uid
+
+                        return (
+                            <div
+                                key={msg.id}
+                                className={
+                                    "chat-message-row " +
+                                    (isOwn ? "chat-message-row--own" : "")
+                                }
+                            >
+                                <div
+                                    className={
+                                        "chat-message-bubble " +
+                                        (isOwn
+                                            ? "chat-message-bubble--own"
+                                            : "chat-message-bubble--other")
+                                    }
+                                >
+                                    <div className="chat-message-meta">
+                                        {msg.userId || "Unknown user"} •{" "}
+                                        {msg.createdAt?.toDate
+                                            ? msg.createdAt.toDate().toLocaleTimeString()
+                                            : "just now"}
+                                    </div>
+                                    <div className="chat-message-text">{msg.text}</div>
+                                </div>
                             </div>
-                            <div>{msg.text}</div>
-                            <hr />
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
             </div>
+            <form onSubmit={handleSendMessage} className="chat-input-bar">
+                <button type="button" className="chat-plus-btn">+</button>
+
+                <input
+                    type="text"
+                    className="chat-input"
+                    placeholder="Message..."
+                    value={newMessage}
+                    onChange={(e) => setNewMessage(e.target.value)}
+                />
+
+                <button type="submit" className="chat-send-btn">
+                    ➤
+                </button>
+            </form>
         </div>
     );
 }

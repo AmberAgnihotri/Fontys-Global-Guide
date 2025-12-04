@@ -1,3 +1,3 @@
-export default function fontysDiscover() {
+export default function FontysDiscover() {
     return <h1>Fontys Discover</h1>;
 }

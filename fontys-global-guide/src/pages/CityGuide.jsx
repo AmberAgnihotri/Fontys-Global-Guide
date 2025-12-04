@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
-import tilburgImg from "../images/tilburg.jpg";
-import eindhovenImg from "../images/Eindhoven.webp";
-import sittardImg from "../images/sittard.jpg";
-import VenloImg from "../images/Venlo.jpg";
-import denboschImg from "../images/denbosch.webp";
-import utrechtImg from "../images/Utrecht.webp";
+import tilburgImg from "../assets/tilburg.webp";
+import eindhovenImg from "../assets/Eindhoven.webp";
+import sittardImg from "../assets/sittard.jpg";
+import VenloImg from "../assets/Venlo.jpg";
+import denboschImg from "../assets/Denbosch.jpg";
+import utrechtImg from "../assets/Utrecht.webp";
 
 export default function CityGuide() {
   const [selectedCity, setSelectedCity] = useState(null);
@@ -14,49 +14,89 @@ export default function CityGuide() {
     { 
       name: "Tilburg", 
       image: tilburgImg,
-      info: "Tilburg staat bekend om het bruisende centrum."
+      info: {
+        about: "Tilburg is the sixth-largest city in the Netherlands with a rich textile heritage. The city is known for the Tilburg Fair (one of the largest fairs in the Benelux) and vibrant cultural life with venues like Poppodium 013.",
+        fontys: "Fontys Locations:",
+        fontysLocations: [
+          "Prof. Goossenslaan 1 - Campus Stappegoor (main location)",
+          "Locomotiefboulevard 101 - Mindlabs",
+          "Zwijsenplein 1"
+        ]
+      }
     },
     { 
       name: "Eindhoven", 
       image: eindhovenImg,
       info: {
-        intro: "Eindhoven is de lichtstad van Nederland en staat bekend om technologie, design en innovatie.",
-        housing: "De gemiddelde huur ligt rond €900–€1300 per maand, afhankelijk van de wijk.",
-        housinglink: [
-              { url: "https://www.wooniezie.nl", label: "Wooniezie.nl" },
-              { url: "https://www.huurwoningen.com/in/eindhoven/?utm_source=google&utm_medium=ads&utm_campaign=16719250034&utm_adgroup=132905063257&gad_source=1&gad_campaignid=16719250034&gbraid=0AAAAACmIcEGZcg6N-YpWPloK2TUlexXfs&gclid=CjwKCAiA55rJBhByEiwAFkY1QGhRo8MtJY_4xbEuaoTq_yKLpAHmPT0qmmjO42G5qw4Zdt-STneR9hoCjTEQAvD_BwE", label: "Huurwoningen.com" },
-              { url: "https://kamernet.nl/huren/kamer-eindhoven?utm_source=google&utm_medium=cpc&utm_campaign=19678546926&utm_content=648163200608&utm_term=kamer%20huren%20eindhoven&gad_source=1&gad_campaignid=19678546926&gbraid=0AAAAAD4d43qtnpeFWlImGJvI0Rjveebu9&gclid=CjwKCAiA55rJBhByEiwAFkY1QIXdUYxNAc3eIbjSZwVPJxHGYfDGNCjIYpIuztkCdeFZGdQaeyEYWxoCw7cQAvD_BwE", label: "Kamernet.nl" },
-             { url: "https://www.fontys.nl/nieuws/hospi-housing-wordt-platform-voor-studenten-en-hospitas-in-eindhoven/", label: "Fontys Hospi Housing" },
+        about: "Eindhoven is the City of Light and is known for technology, design, and innovation. Home to Philips and PSV, the city has developed into a tech and design hub. The Strijp-S area, a former Philips industrial site, has been transformed into a trendy creative district.",
+        housing: "Average rent ranges from €900–€1300 per month, depending on the neighborhood.",
+        housingLinks: [
+          { url: "https://www.wooniezie.nl", label: "Wooniezie.nl" },
+          { url: "https://www.huurwoningen.com/in/eindhoven/", label: "Huurwoningen.com" },
+          { url: "https://kamernet.nl/huren/kamer-eindhoven", label: "Kamernet.nl" },
+          { url: "https://www.fontys.nl/nieuws/hospi-housing-wordt-platform-voor-studenten-en-hospitas-in-eindhoven/", label: "Fontys Hospi Housing" },
         ],
-        transport: "Eindhoven heeft een groot treinstation, veel buslijnen en een internationale luchthaven.",
+        transport: "Eindhoven has a large train station, extensive bus network, and an international airport.",
         highlights: [
           "Philips Museum",
-          "Strijp-S",
+          "Strijp-S creative district",
           "High Tech Campus",
-          "Effenaar",
-          "PSV Stadion"
+          "Effenaar music venue",
+          "PSV Stadium"
+        ],
+        fontys: "Fontys Locations:",
+        fontysLocations: [
+          "Rachelsmolen 1 - Campus Rachelsmolen (main campus)",
+          "Emmasingel 28 - Witte Dame building",
+          "De Rondom 1 - Nexus building",
+          "Theo Koomenlaan 3",
+          "Achtseweg Zuid 151 C"
         ]
       }
     },
     { 
       name: "Sittard", 
       image: sittardImg,
-      info: "Sittard is een rustige, historische stad."
+      info: {
+        about: "Cozy Limburg city with a beautiful historic center. Known for carnival and Limburg hospitality. Centrally located in Limburg province.",
+        fontys: "Fontys Location:",
+        fontysLocations: [
+          "Mgr. Claessensstraat 4"
+        ]
+      }
     },
     { 
       name: "Venlo", 
       image: VenloImg,
-      info: "Venlo ligt dicht bij de Duitse grens en heeft veel natuur."
+      info: {
+        about: "Border city near Germany, known for horticulture and FloraHolland flower auction. Modern city center after reconstruction. International atmosphere due to its border location.",
+        fontys: "Fontys Location:",
+        fontysLocations: [
+          "Tegelseweg 255 - Campus Venlo (over 50 nationalities)"
+        ]
+      }
     },
     { 
       name: "'s-Hertogenbosch", 
       image: denboschImg,
-      info: "Bekend om de Bossche bol en historische binnenstad."
+      info: {
+        about: "Charming capital of Brabant with a beautiful historic center. Famous for Bossche Bollen (chocolate pastries), painter Hieronymus Bosch, and carnival. Cozy city center with canals.",
+        fontys: "Fontys Location:",
+        fontysLocations: [
+          "Frans Fransenstraat 15"
+        ]
+      }
     },
     { 
       name: "Utrecht", 
       image: utrechtImg,
-      info: "Utrecht heeft unieke grachten met werfkelders."
+      info: {
+        about: "Fourth largest city in the Netherlands with the iconic Dom Tower and beautiful canals. Vibrant student life and centrally located in the country, making it an ideal base.",
+        fontys: "Fontys Location:",
+        fontysLocations: [
+          "Nieuwegracht 65 (small branch - most programs are in Brabant and Limburg)"
+        ]
+      }
     },
   ];
 
@@ -68,7 +108,7 @@ export default function CityGuide() {
       margin: "0 auto",
     },
     header: {
-      background: "#67327a",
+      background: "#663366",
       color: "white",
       padding: "14px 16px",
       borderRadius: 6,
@@ -122,12 +162,13 @@ export default function CityGuide() {
     }
   };
 
-  // ⭐ DETAIL SCREEN ⭐
   if (selectedCity) {
+    const info = selectedCity.info;
+    
     return (
       <div style={styles.container}>
         <button style={styles.backButton} onClick={() => setSelectedCity(null)}>
-          ← Terug
+          ← Back
         </button>
 
         <h1>{selectedCity.name}</h1>
@@ -138,60 +179,73 @@ export default function CityGuide() {
           style={styles.detailImage}
         />
 
-        {/* 👉 Only Eindhoven gets expanded info */}
-        {typeof selectedCity.info === "string" ? (
-          <p>{selectedCity.info}</p>
-        ) : (
-          <div>
-            <h3>Over {selectedCity.name}</h3>
-            <p>{selectedCity.info.intro}</p>
+        <div>
+          <h3>About {selectedCity.name}</h3>
+          <p>{info.about}</p>
 
-            <h3>Wonen</h3>
-            <p>{selectedCity.info.housing}</p>
+          {info.housing && (
+            <>
+              <h3>Housing</h3>
+              <p>{info.housing}</p>
+            </>
+          )}
 
-         {selectedCity.info.housinglink && (
-  <div>
-    <h4>Bekijk beschikbare woningen:</h4>
-    {selectedCity.info.housinglink.map((link, index) => (
-      <a 
-        key={index}
-        href={link.url} 
-        target="_blank" 
-        rel="noopener noreferrer"
-        style={{
-          display: "inline-block",
-          margin: "5px 8px 5px 0",
-          padding: "8px 14px",
-          background: "#67327a",
-          color: "white",
-          textDecoration: "none",
-          borderRadius: 6,
-          fontSize: 14,
-        }}
-      >
-        {link.label}
-      </a>
-    ))}
-  </div>
-)}
-
-
-            <h3>Vervoer</h3>
-            <p>{selectedCity.info.transport}</p>
-
-            <h3>Belangrijke plekken</h3>
-            <ul>
-              {selectedCity.info.highlights.map((item) => (
-                <li key={item}>{item}</li>
+          {info.housingLinks && (
+            <div style={{ marginBottom: 20 }}>
+              <h4>Find available housing:</h4>
+              {info.housingLinks.map((link, index) => (
+                <a 
+                  key={index}
+                  href={link.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  style={{
+                    display: "inline-block",
+                    margin: "5px 8px 5px 0",
+                    padding: "8px 14px",
+                    background: "#67327a",
+                    color: "white",
+                    textDecoration: "none",
+                    borderRadius: 6,
+                    fontSize: 14,
+                  }}
+                >
+                  {link.label}
+                </a>
               ))}
-            </ul>
-          </div>
-        )}
+            </div>
+          )}
+
+          {info.transport && (
+            <>
+              <h3>Transportation</h3>
+              <p>{info.transport}</p>
+            </>
+          )}
+
+          {info.highlights && (
+            <>
+              <h3>Hotspots</h3>
+              <ul>
+                {info.highlights.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </>
+          )}
+
+          <h3>Fontys Locations</h3>
+          <p>{info.fontys}</p>
+          <ul>
+            {info.fontysLocations.map((location, index) => (
+              <li key={index}>{location}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     );
   }
 
-  // ⭐ OVERVIEW SCREEN ⭐
   return (
     <div style={styles.container}>
       <div style={styles.header}>City Guide & Housing</div>
