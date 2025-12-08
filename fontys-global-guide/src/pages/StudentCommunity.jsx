@@ -20,7 +20,6 @@ function StudentCommunity() {
 
     const { t } = useTranslation();
 
-    // 1) Channels ophalen
     useEffect(() => {
         const channelsRef = collection(db, "channels");
         const unsubscribe = onSnapshot(channelsRef, (snapshot) => {
@@ -34,7 +33,6 @@ function StudentCommunity() {
         return () => unsubscribe();
     }, []);
 
-    // 2) Messages ophalen voor geselecteerde channel
     useEffect(() => {
         if (!selectedChannelId) return;
 
@@ -54,7 +52,6 @@ function StudentCommunity() {
         return () => unsubscribe();
     }, [selectedChannelId]);
 
-    // 3) Bericht versturen
     const handleSendMessage = async (e) => {
         e.preventDefault();
 
@@ -66,7 +63,7 @@ function StudentCommunity() {
             const messagesRef = collection(channelRef, "messages");
 
             await addDoc(messagesRef, {
-                userId: "testUser123",   // later vervangen door echte userId
+                userId: "testUser123",
                 text,
                 createdAt: serverTimestamp(),
             });
@@ -98,16 +95,15 @@ function StudentCommunity() {
                 ))}
             </div>
 
-            {/* MESSAGES */}
+
             <div className="card chat-card">
                 <div className="chat-messages">
                     {messages.length === 0 && (
-                        // 👇 ook via t()
                         <p className="text-muted">{t("studentCommunity.noMessages")}</p>
                     )}
 
                     {messages.map((msg) => {
-                        const isOwn = msg.userId === "testUser123"; // later: auth.currentUser.uid
+                        const isOwn = msg.userId === "testUser123";
 
                         return (
                             <div
@@ -139,14 +135,12 @@ function StudentCommunity() {
                 </div>
             </div>
 
-            {/* INPUT BAR */}
             <form onSubmit={handleSendMessage} className="chat-input-bar">
                 <button type="button" className="chat-plus-btn">+</button>
 
                 <input
                     type="text"
                     className="chat-input"
-                    // 👇 placeholder ook via t()
                     placeholder={t("studentCommunity.placeholder")}
                     value={newMessage}
                     onChange={(e) => setNewMessage(e.target.value)}
