@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { db } from '../firebase/config.js';
+import { db, auth } from '../firebase/config.js';
 import {
     collection,
     doc,
@@ -7,18 +7,42 @@ import {
     orderBy,
     onSnapshot,
     addDoc,
-    serverTimestamp
+    serverTimestamp,
+    getDoc
 } from "firebase/firestore";
+import { onAuthStateChanged } from "firebase/auth";
 import '../styles/StudentCommunity.css';
 import { useTranslation } from "react-i18next";
 
-function StudentCommunity() {
+export default function StudentCommunity() {
     const [channels, setChannels] = useState([]);
     const [selectedChannelId, setSelectedChannelId] = useState("general");
     const [messages, setMessages] = useState([]);
     const [newMessage, setNewMessage] = useState("");
+    const [currentUser, setCurrentUser] = useState(null);
+    const [profileData, setProfileData] = useState(null);
 
     const { t } = useTranslation();
+
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, async (user) => {
+            setCurrentUser(user);
+
+            if (user) {
+                const userRef = doc(db, "users", user.uid);
+                const snap = await getDoc(userRef);
+
+                if (snap.exists()) setProfileData(snap.data());
+                else {
+                    setProfileData({
+                        displayName: user.email.split("@")[0]
+                    });
+                }
+            }
+        });
+
+        return () => unsubscribe();
+    }, []);
 
     useEffect(() => {
         const channelsRef = collection(db, "channels");
@@ -55,16 +79,17 @@ function StudentCommunity() {
     const handleSendMessage = async (e) => {
         e.preventDefault();
 
-        const text = newMessage.trim();
-        if (!text || !selectedChannelId) return;
+        if (!currentUser) return alert("You must be logged in!");
+        if (!newMessage.trim()) return;
 
         try {
             const channelRef = doc(db, "channels", selectedChannelId);
             const messagesRef = collection(channelRef, "messages");
 
             await addDoc(messagesRef, {
-                userId: "testUser123",
-                text,
+                userId: currentUser.uid,
+                displayName: profileData?.displayName || currentUser.email.split("@")[0],
+                text: newMessage.trim(),
                 createdAt: serverTimestamp(),
             });
 
@@ -76,25 +101,29 @@ function StudentCommunity() {
 
     return (
         <div className="container mt-4">
-            {/* 👇 deze moet via t() */}
             <h2 className="mb-3">{t("studentCommunity.title")}</h2>
 
-            {/* CHANNEL LIST */}
             <div className="mb-3 d-flex gap-2 flex-wrap">
                 {channels.map((ch) => (
                     <button
                         key={ch.id}
                         className={
                             "btn btn-sm " +
-                            (ch.id === selectedChannelId ? "btn-primary" : "btn-outline-primary")
+                            (ch.id === selectedChannelId
+                                ? "btn-primary"
+                                : "btn-outline-primary")
                         }
                         onClick={() => setSelectedChannelId(ch.id)}
+                        style={{
+                            backgroundColor: ch.id === selectedChannelId ? "#663366" : "white",
+                            color: ch.id === selectedChannelId ? "white" : "#663366",
+                            borderColor: "#663366",
+                        }}
                     >
                         {ch.name}
                     </button>
                 ))}
             </div>
-
 
             <div className="card chat-card">
                 <div className="chat-messages">
@@ -103,7 +132,7 @@ function StudentCommunity() {
                     )}
 
                     {messages.map((msg) => {
-                        const isOwn = msg.userId === "testUser123";
+                        const isOwn = msg.userId === currentUser?.uid;
 
                         return (
                             <div
@@ -122,11 +151,15 @@ function StudentCommunity() {
                                     }
                                 >
                                     <div className="chat-message-meta">
-                                        {msg.userId || "Unknown user"} •{" "}
+                                        {msg.displayName || "Unknown user"} •{" "}
                                         {msg.createdAt?.toDate
-                                            ? msg.createdAt.toDate().toLocaleTimeString()
+                                            ? msg.createdAt.toDate().toLocaleTimeString([], {
+                                                hour: "2-digit",
+                                                minute: "2-digit",
+                                            })
                                             : "just now"}
                                     </div>
+
                                     <div className="chat-message-text">{msg.text}</div>
                                 </div>
                             </div>
@@ -153,5 +186,3 @@ function StudentCommunity() {
         </div>
     );
 }
-
-export default StudentCommunity;

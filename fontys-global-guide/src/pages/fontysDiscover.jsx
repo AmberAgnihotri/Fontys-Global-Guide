@@ -1,12 +1,14 @@
 import { useState } from 'react';
 
-// Importeer je foto's uit de assets folder
-// Pas de paden aan naar waar jouw foto's staan
+
 import imgNathan from '../assets/Man-silliout-pasfoto1.jpg';
 import imgMyron from '../assets/Man-silliout-pasfoto2.jpg';
 import imgShirin from '../assets/Vrouw-silliouet-pasfoto.jpg';
+import { useNavigate } from "react-router-dom";
+
 
 export default function FontysDiscover() {
+  const navigate = useNavigate();
   const [selectedStory, setSelectedStory] = useState(null);
 
   const stories = [
@@ -18,7 +20,7 @@ export default function FontysDiscover() {
     },
     {
       title: "Myron's Experience",
-      preview: "'The Commuter Pioneer' Age: 24 years old, from Aruba 🇦🇼. Studies: ICT at Fontys Eindoven Since: 2021...", 
+      preview: "'The Commuter Pioneer' Age: 24 years old, from Aruba 🇦🇼. Studies: ICT at Fontys Eindoven Since: 2021...",
       fullText: "I came from Aruba to the Netherlands in 2021 for a better future. First I did my MBO in Gouda, then I looked for the best HBO and ended up at Fontys. The hardest part? The language. I doubted whether my Dutch was good enough, so I started working at MediaMarkt to practice. Now I commute an hour daily from The Hague to Tilburg - not ideal, but finding housing is difficult. Through an Aruban association I got an apartment in 6-12 months for €800/month. My biggest tip: just dare! You'll encounter obstacles, but think of your goal. And arrange your housing FIRST, that takes the most time. Biggest challenge: Finding housing + learning the language What helped: Aruban association, working alongside studies Financing: DUO + part-time job MediaMarkt + benefits.",
       image: imgMyron
     },
@@ -55,7 +57,7 @@ export default function FontysDiscover() {
           minHeight: '100vh',
           padding: '20px'
         }}>
-          <button 
+          <button
             onClick={handleBackClick}
             style={{
               padding: '8px 16px',
@@ -79,8 +81,8 @@ export default function FontysDiscover() {
               margin: '0 auto',
               backgroundColor: '#f9fafb'
             }}>
-              <img 
-                src={story.image} 
+              <img
+                src={story.image}
                 alt={story.title}
                 style={{
                   width: '100%',
@@ -236,7 +238,7 @@ export default function FontysDiscover() {
           padding: '16px'
         }}>
           <button
-            onClick={() => alert('Navigating to Expense Tracker...')}
+            onClick={() => navigate("/expense-tracker")}
             style={{
               flex: 1,
               border: '4px solid black',
@@ -253,7 +255,7 @@ export default function FontysDiscover() {
             EXPENSE TRACKER
           </button>
           <button
-            onClick={() => alert('Navigating to Campus Explorer...')}
+            onClick={() => navigate("/campus-explorer")}
             style={{
               flex: 1,
               border: '4px solid black',

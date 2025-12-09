@@ -87,13 +87,6 @@ function Navbar() {
                             </li>
 
                             <li className="nav-item">
-                                <Link className="nav-link text-white" to="/housing" onClick={closeOffcanvas}>
-                                    <i className="fa-solid fa-house-chimney-window me-2"></i>
-                                    Housing
-                                </Link>
-                            </li>
-
-                            <li className="nav-item">
                                 <Link className="nav-link text-white" to="/administration" onClick={closeOffcanvas}>
                                     <i className="fa-regular fa-file-lines me-2"></i>
                                     Administration
@@ -102,6 +95,7 @@ function Navbar() {
 
                             <li className="nav-item">
                                 <Link className="nav-link text-white" to="/fontys-discover" onClick={closeOffcanvas}>
+                                    <i class="fas fa-book-open me-2"></i>
                                     Fontys Discover
                                 </Link>
                             </li>
@@ -115,6 +109,7 @@ function Navbar() {
 
                             <li className="nav-item">
                                 <Link className="nav-link text-white" to="/expense-tracker" onClick={closeOffcanvas}>
+                                    <i class="fa-solid fa-dollar-sign me-2"></i>
                                     Expense Tracker
                                 </Link>
                             </li>
@@ -128,6 +123,7 @@ function Navbar() {
 
                             <li className="nav-item">
                                 <Link className="nav-link text-white" to="/profile" onClick={closeOffcanvas}>
+                                    <i class="fa-regular fa-user me-2"></i>
                                     Profile
                                 </Link>
                             </li>
